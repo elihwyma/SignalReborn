@@ -69,12 +69,12 @@ class MainViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(defineMapType), name: .ChangeMapType, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(hideMapWatermarks), name: .HideMapWatermarks, object: nil)
         
-        /* if !self.hasDebugged {
+        if !self.hasDebugged {
             if DatabaseManager.shared.cells.count == 0 {
                 self.hasDebugged = true
                 self.performSegue(withIdentifier: "noTowersMapped", sender: nil)
             }
-        } */
+        }
     }
     
     //MARK: - Adding the lines and annotations on the map
