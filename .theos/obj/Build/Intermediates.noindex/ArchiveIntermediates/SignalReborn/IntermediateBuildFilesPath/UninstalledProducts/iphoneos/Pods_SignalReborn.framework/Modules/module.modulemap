@@ -1,6 +1,0 @@
-framework module Pods_SignalReborn {
-  umbrella header "Pods-SignalReborn-umbrella.h"
-
-  export *
-  module * { export * }
-}

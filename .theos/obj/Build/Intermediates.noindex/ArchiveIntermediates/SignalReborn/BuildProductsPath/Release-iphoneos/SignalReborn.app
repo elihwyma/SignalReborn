@@ -1,1 +1,0 @@
-/Users/charliewhile/Documents/GitHub/SignalReborn/.theos/obj/install/Applications/SignalReborn.app
