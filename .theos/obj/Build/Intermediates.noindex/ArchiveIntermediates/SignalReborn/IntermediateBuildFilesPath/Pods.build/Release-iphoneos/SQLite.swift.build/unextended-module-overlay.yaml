@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/charliewhile/Documents/GitHub/SignalReborn/.theos/obj/Build/Intermediates.noindex/ArchiveIntermediates/SignalReborn/BuildProductsPath/Release-iphoneos/SQLite.swift/SQLite.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/charliewhile/Documents/GitHub/SignalReborn/.theos/obj/Build/Intermediates.noindex/ArchiveIntermediates/SignalReborn/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/SQLite.swift.build/unextended-module.modulemap",
+    }]
+  }]
+}

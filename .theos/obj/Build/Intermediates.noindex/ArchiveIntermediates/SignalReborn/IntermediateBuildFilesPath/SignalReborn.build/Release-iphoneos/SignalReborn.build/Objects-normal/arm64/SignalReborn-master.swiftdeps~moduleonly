@@ -1,0 +1,22 @@
+version: "Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+options: "d1b5a932d41a927af91da8fd3887677e"
+build_time: [1602353163, 523720000]
+inputs:
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Custom Cells/creditsCell.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Backend/Extensions/MKAnnotationView+Extension.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Backend/SignalController.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/View Controllers/helpTheCache.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Custom Cells/Info Cell /InfoCell.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/View Controllers/InformationController.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/View Controllers/creditViewController.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Custom Cells/Segmented Cell/SegmentedCell.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/View Controllers/MainViewController.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Backend/Extensions/UserDefaults+Extension.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Delegates /AppDelegate.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Backend/CSVController.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Backend/DatabaseManager.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Custom Cells/Button Cell/ButtonCell.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Backend/Extensions/NSNotification+Extension.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Custom Cells/Settings Switch Cell/SettingsSwitchCell.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Custom Cells/Social Cell/SocialCell.swift": [9223372036, 854775807]
+  "/Users/charliewhile/Documents/GitHub/SignalReborn/SignalReborn/Custom Map Views/customMapViews.swift": [9223372036, 854775807]
