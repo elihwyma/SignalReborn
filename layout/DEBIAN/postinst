@@ -1,0 +1,2 @@
+chown root:wheel /usr/libexec/signal/SignalHelper
+chmod 06755 /usr/libexec/signal/SignalHelper
