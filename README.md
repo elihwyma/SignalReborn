@@ -11,6 +11,7 @@
  - [Signal Reborn on Packix](https://repo.packix.com/package/com.charliewhile.signalreborn/)
 ### How to build
 - Download [Theos](https://github.com/theos/theos)
+- Install Xcode
 - Clone this repository
 - Run `pod install` in the Signal Reborn directory
 - Run `make package` in the Signal Reborn directory
