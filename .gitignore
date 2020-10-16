@@ -1,6 +1,7 @@
 Pods
-packages
-<<<<<<< HEAD
 .theos
-=======
->>>>>>> parent of eb5a7f9... wtf
+.vscode
+.DS_Store
+.dragon
+packages
+*.ninja
