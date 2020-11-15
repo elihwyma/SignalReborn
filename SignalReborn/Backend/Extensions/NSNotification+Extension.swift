@@ -2,8 +2,8 @@
 //  NSNotificationExtension.swift
 //  SignalReborn
 //
-//  Created by Charlie While on 17/09/2020.
-//  Copyright © 2020 Charlie While. All rights reserved.
+//  Created by Amy While on 17/09/2020.
+//  Copyright © 2020 Amy While. All rights reserved.
 //
 
 import Foundation
