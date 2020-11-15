@@ -10,6 +10,16 @@
 		530B3EB4249EF47A00BE4276 /* customMapViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B3EB3249EF47A00BE4276 /* customMapViews.swift */; };
 		530B7F4B24B25FEB003DD58E /* creditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B7F4A24B25FEB003DD58E /* creditViewController.swift */; };
 		530B7F4D24B26491003DD58E /* creditsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B7F4C24B26491003DD58E /* creditsCell.swift */; };
+		532256C62561D7A60035788F /* AppIconPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532256C42561D7A60035788F /* AppIconPopover.swift */; };
+		532256C72561D7A60035788F /* AppIconPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532256C42561D7A60035788F /* AppIconPopover.swift */; };
+		532256C82561D7A60035788F /* AppIconPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532256C52561D7A60035788F /* AppIconPopover.xib */; };
+		532256C92561D7A60035788F /* AppIconPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532256C52561D7A60035788F /* AppIconPopover.xib */; };
+		532256D52561DA8E0035788F /* FancyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532256D42561DA8E0035788F /* FancyTableView.swift */; };
+		532256D62561DA8E0035788F /* FancyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532256D42561DA8E0035788F /* FancyTableView.swift */; };
+		532256DC2561DB7A0035788F /* AppIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532256DA2561DB7A0035788F /* AppIconCell.xib */; };
+		532256DD2561DB7A0035788F /* AppIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532256DA2561DB7A0035788F /* AppIconCell.xib */; };
+		532256DE2561DB7A0035788F /* AppIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532256DB2561DB7A0035788F /* AppIconCell.swift */; };
+		532256DF2561DB7A0035788F /* AppIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532256DB2561DB7A0035788F /* AppIconCell.swift */; };
 		5325F30A24B0EBF2004208F1 /* rootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5325F30924B0EBF2004208F1 /* rootController.m */; };
 		5327204824B3C1530098EB90 /* helpTheCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327204724B3C1530098EB90 /* helpTheCache.swift */; };
 		532F40472527FFAB008BED0F /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F40452527FFAB008BED0F /* SocialCell.swift */; };
@@ -79,6 +89,11 @@
 		530B3EB3249EF47A00BE4276 /* customMapViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customMapViews.swift; sourceTree = "<group>"; };
 		530B7F4A24B25FEB003DD58E /* creditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creditViewController.swift; sourceTree = "<group>"; };
 		530B7F4C24B26491003DD58E /* creditsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creditsCell.swift; sourceTree = "<group>"; };
+		532256C42561D7A60035788F /* AppIconPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconPopover.swift; sourceTree = "<group>"; };
+		532256C52561D7A60035788F /* AppIconPopover.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppIconPopover.xib; sourceTree = "<group>"; };
+		532256D42561DA8E0035788F /* FancyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyTableView.swift; sourceTree = "<group>"; };
+		532256DA2561DB7A0035788F /* AppIconCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppIconCell.xib; sourceTree = "<group>"; };
+		532256DB2561DB7A0035788F /* AppIconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconCell.swift; sourceTree = "<group>"; };
 		5325F30924B0EBF2004208F1 /* rootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rootController.m; sourceTree = "<group>"; };
 		5325F30B24B0EBFF004208F1 /* NSTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTask.h; sourceTree = "<group>"; };
 		5325F30C24B102AB004208F1 /* rootController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rootController.h; sourceTree = "<group>"; };
@@ -153,6 +168,7 @@
 		530B7F4524B22176003DD58E /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				532256D92561DB7A0035788F /* App Icon Cell */,
 				532F40442527FF8E008BED0F /* Social Cell */,
 				53A427AB251BC0890014DB06 /* Segmented Cell */,
 				53A427A5251BB7E10014DB06 /* Button Cell */,
@@ -161,6 +177,41 @@
 				530B7F4C24B26491003DD58E /* creditsCell.swift */,
 			);
 			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		532256C32561D78A0035788F /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				532256D32561DA720035788F /* Fancy Table View */,
+				532256D02561DA5A0035788F /* App Icon Popover */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		532256D02561DA5A0035788F /* App Icon Popover */ = {
+			isa = PBXGroup;
+			children = (
+				532256C42561D7A60035788F /* AppIconPopover.swift */,
+				532256C52561D7A60035788F /* AppIconPopover.xib */,
+			);
+			path = "App Icon Popover";
+			sourceTree = "<group>";
+		};
+		532256D32561DA720035788F /* Fancy Table View */ = {
+			isa = PBXGroup;
+			children = (
+				532256D42561DA8E0035788F /* FancyTableView.swift */,
+			);
+			path = "Fancy Table View";
+			sourceTree = "<group>";
+		};
+		532256D92561DB7A0035788F /* App Icon Cell */ = {
+			isa = PBXGroup;
+			children = (
+				532256DA2561DB7A0035788F /* AppIconCell.xib */,
+				532256DB2561DB7A0035788F /* AppIconCell.swift */,
+			);
+			path = "App Icon Cell";
 			sourceTree = "<group>";
 		};
 		532F40442527FF8E008BED0F /* Social Cell */ = {
@@ -196,6 +247,7 @@
 		53390B4C2498BE4E002CA74E /* SignalReborn */ = {
 			isa = PBXGroup;
 			children = (
+				532256C32561D78A0035788F /* Custom Views */,
 				535B2B882561673D001E3572 /* SignalReborn-Bridging-Header.h */,
 				53B36689251405BD00B7B374 /* Backend */,
 				530B7F4524B22176003DD58E /* Custom Cells */,
@@ -411,9 +463,11 @@
 				53390B5C2498BE58002CA74E /* LaunchScreen.storyboard in Resources */,
 				53A427A2251BB4FC0014DB06 /* InfoCell.xib in Resources */,
 				53390B592498BE58002CA74E /* Assets.xcassets in Resources */,
+				532256C82561D7A60035788F /* AppIconPopover.xib in Resources */,
 				53A6742125608C9500DA6FCB /* CarrierDatabase.csv in Resources */,
 				53390B572498BE4E002CA74E /* Main.storyboard in Resources */,
 				532F40492527FFAB008BED0F /* SocialCell.xib in Resources */,
+				532256DC2561DB7A0035788F /* AppIconCell.xib in Resources */,
 				53A427A9251BB8910014DB06 /* ButtonCell.xib in Resources */,
 				53A4278E251BAA120014DB06 /* SettingsSwitchCell.xib in Resources */,
 				53A6742A2560929200DA6FCB /* SignalHelper in Resources */,
@@ -429,9 +483,11 @@
 				533BB97D251F860300CBFF0D /* LaunchScreen.storyboard in Resources */,
 				533BB97E251F860300CBFF0D /* InfoCell.xib in Resources */,
 				53A6742B2560929200DA6FCB /* SignalHelper in Resources */,
+				532256C92561D7A60035788F /* AppIconPopover.xib in Resources */,
 				53A6742225608C9500DA6FCB /* CarrierDatabase.csv in Resources */,
 				533BB97F251F860300CBFF0D /* Assets.xcassets in Resources */,
 				533BB980251F860300CBFF0D /* Main.storyboard in Resources */,
+				532256DD2561DB7A0035788F /* AppIconCell.xib in Resources */,
 				532F404A2527FFAB008BED0F /* SocialCell.xib in Resources */,
 				533BB981251F860300CBFF0D /* ButtonCell.xib in Resources */,
 				533BB982251F860300CBFF0D /* SettingsSwitchCell.xib in Resources */,
@@ -528,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				530B7F4D24B26491003DD58E /* creditsCell.swift in Sources */,
+				532256C62561D7A60035788F /* AppIconPopover.swift in Sources */,
 				537F0421249C452500EAC7FA /* SRMonitor.m in Sources */,
 				533BB960251F4BC400CBFF0D /* MKAnnotationView+Extension.swift in Sources */,
 				53B3668D251407C700B7B374 /* SignalController.swift in Sources */,
@@ -537,6 +594,8 @@
 				530B7F4B24B25FEB003DD58E /* creditViewController.swift in Sources */,
 				53A427AE251BC1840014DB06 /* SegmentedCell.swift in Sources */,
 				5325F30A24B0EBF2004208F1 /* rootController.m in Sources */,
+				532256D52561DA8E0035788F /* FancyTableView.swift in Sources */,
+				532256DE2561DB7A0035788F /* AppIconCell.swift in Sources */,
 				53390B522498BE4E002CA74E /* MainViewController.swift in Sources */,
 				533BB9A02520B0AE00CBFF0D /* UserDefaults+Extension.swift in Sources */,
 				53390B4E2498BE4E002CA74E /* AppDelegate.swift in Sources */,
@@ -555,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				533BB965251F860300CBFF0D /* creditsCell.swift in Sources */,
+				532256C72561D7A60035788F /* AppIconPopover.swift in Sources */,
 				533BB966251F860300CBFF0D /* SRMonitor.m in Sources */,
 				533BB968251F860300CBFF0D /* MKAnnotationView+Extension.swift in Sources */,
 				533BB969251F860300CBFF0D /* SignalController.swift in Sources */,
@@ -564,6 +624,8 @@
 				533BB96D251F860300CBFF0D /* creditViewController.swift in Sources */,
 				533BB96E251F860300CBFF0D /* SegmentedCell.swift in Sources */,
 				533BB96F251F860300CBFF0D /* rootController.m in Sources */,
+				532256D62561DA8E0035788F /* FancyTableView.swift in Sources */,
+				532256DF2561DB7A0035788F /* AppIconCell.swift in Sources */,
 				533BB970251F860300CBFF0D /* MainViewController.swift in Sources */,
 				533BB9A12520B0AE00CBFF0D /* UserDefaults+Extension.swift in Sources */,
 				533BB971251F860300CBFF0D /* AppDelegate.swift in Sources */,

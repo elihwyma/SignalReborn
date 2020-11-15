@@ -14,4 +14,5 @@ extension NSNotification.Name {
     static let ChangeMapType = Notification.Name("ChangeMapType")
     static let HideMapWatermarks = Notification.Name("HideMapWatermarks")
     static let FuckyWucky = Notification.Name("FuckyWucky")
+    static let HidePopup = Notificaton.Name("HideAppIconSelector")
 }
