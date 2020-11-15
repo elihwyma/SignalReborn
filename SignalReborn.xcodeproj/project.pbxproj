@@ -68,6 +68,8 @@
 		53A6742225608C9500DA6FCB /* CarrierDatabase.csv in Resources */ = {isa = PBXBuildFile; fileRef = 53A6742025608C8E00DA6FCB /* CarrierDatabase.csv */; };
 		53A6742A2560929200DA6FCB /* SignalHelper in Resources */ = {isa = PBXBuildFile; fileRef = 53A674292560928F00DA6FCB /* SignalHelper */; };
 		53A6742B2560929200DA6FCB /* SignalHelper in Resources */ = {isa = PBXBuildFile; fileRef = 53A674292560928F00DA6FCB /* SignalHelper */; };
+		53A674302560B30400DA6FCB /* SignalEntitlements.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5384F6CE24AE9FE400305F02 /* SignalEntitlements.xml */; };
+		53A674372560B58400DA6FCB /* SignalEntitlements.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5384F6CE24AE9FE400305F02 /* SignalEntitlements.xml */; };
 		53B3668D251407C700B7B374 /* SignalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3668C251407C700B7B374 /* SignalController.swift */; };
 		53B3668F2514095200B7B374 /* NSNotification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3668E2514095200B7B374 /* NSNotification+Extension.swift */; };
 		5672E5E03EC5AE1B31CDDC23 /* Pods_SignalReborn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997F685939BDCA5797A25263 /* Pods_SignalReborn.framework */; };
@@ -405,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A674302560B30400DA6FCB /* SignalEntitlements.xml in Resources */,
 				53390B5C2498BE58002CA74E /* LaunchScreen.storyboard in Resources */,
 				53A427A2251BB4FC0014DB06 /* InfoCell.xib in Resources */,
 				53390B592498BE58002CA74E /* Assets.xcassets in Resources */,
@@ -422,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A674372560B58400DA6FCB /* SignalEntitlements.xml in Resources */,
 				533BB97D251F860300CBFF0D /* LaunchScreen.storyboard in Resources */,
 				533BB97E251F860300CBFF0D /* InfoCell.xib in Resources */,
 				53A6742B2560929200DA6FCB /* SignalHelper in Resources */,
@@ -715,10 +719,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = SignalReborn/SignalReborn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 69;
 				DEVELOPMENT_TEAM = 7J8FJX4SRX;
+				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Resources",
@@ -746,10 +750,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = SignalReborn/SignalReborn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 69;
 				DEVELOPMENT_TEAM = 7J8FJX4SRX;
+				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Resources",
