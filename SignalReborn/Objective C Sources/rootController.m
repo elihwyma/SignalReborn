@@ -11,7 +11,19 @@
 
 
 @implementation rootController
+
+-(void)justCheckHelperExists {
+    NSString *path = @"/var/mobile/Library/Application Support/SignalReborn";
+    bool *isFolder = NULL;
+    [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:isFolder];
+    if (!isFolder) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:NO attributes:nil error:NULL];
+    }
+}
+
 -(NSString *)copyFiles {
+    [self justCheckHelperExists];
+    
     [self runCommandInPath:@"cp /var/root/Library/Caches/locationd/cache_encryptedB.db-wal /var/mobile/Library/Application\\ Support/SignalReborn/SignalCache.db-wal" asRoot:YES];
     [self runCommandInPath:@"cp /var/root/Library/Caches/locationd/cache_encryptedB.db-shm /var/mobile/Library/Application\\ Support/SignalReborn/SignalCache.db-shm" asRoot:YES];
     return([self runCommandInPath:@"cp /var/root/Library/Caches/locationd/cache_encryptedB.db /var/mobile/Library/Application\\ Support/SignalReborn/SignalCache.db" asRoot:YES]);
@@ -42,7 +54,7 @@
     NSTask *task = [[NSTask alloc] init];
     
     if (root) {
-        [task setLaunchPath:@"/Applications/SignalReborn.app/SignalHelper"];
+        [task setLaunchPath:@"/Applications/Signal.app/SignalHelper"];
         [task setArguments:@[shellPath, @"-c", command]];
     }
     else {
@@ -68,7 +80,6 @@
 }
 
 - (NSString *)locateCommandInPath:(NSString *)command shell:(NSString *)shellPath {
-    
     NSTask *which = [[NSTask alloc] init];
     [which setLaunchPath:shellPath];
     [which setArguments:@[@"-c", [NSString stringWithFormat:@"which %@", command]]];
