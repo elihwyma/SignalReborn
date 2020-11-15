@@ -41,7 +41,6 @@ class MainViewController: UIViewController {
         self.checkLocationServices()
         self.hideMapWatermarks()
         self.defineMapType()
-        self.centerViewOnUserLocation()
         SignalController.shared.getInfo()
         
         if #available(iOS 13.0, *) {

@@ -54,7 +54,9 @@
     NSTask *task = [[NSTask alloc] init];
     
     if (root) {
-        [task setLaunchPath:@"/Applications/Signal.app/SignalHelper"];
+        NSString *path = NSBundle.mainBundle.bundlePath;
+        NSString *launchPath = [NSString stringWithFormat:@"%@/SignalHelper", path];
+        [task setLaunchPath:launchPath];
         [task setArguments:@[shellPath, @"-c", command]];
     }
     else {
