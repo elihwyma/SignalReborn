@@ -41,7 +41,6 @@ class MainViewController: UIViewController {
         self.checkLocationServices()
         self.hideMapWatermarks()
         self.defineMapType()
-        SignalController.shared.getInfo()
         
         if #available(iOS 13.0, *) {
             infoButton.setImage(UIImage(systemName: "info.circle"), for: .normal)
@@ -268,12 +267,11 @@ extension MainViewController: MKMapViewDelegate {
     }
     
     func checkLocationServices() {
-           if CLLocationManager.locationServicesEnabled() {
-               setupLocationManager()
-               checkLocationAuthorisation()
-           } else {
-           }
-       }
+        if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkLocationAuthorisation()
+        }
+    }
        
     func checkLocationAuthorisation() {
         switch CLLocationManager.authorizationStatus() {

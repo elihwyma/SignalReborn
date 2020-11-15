@@ -28,6 +28,7 @@ class creditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     private let credits = [
+        Credit(creditNames: "Amy While", reason: "Main Developer", socialLinks: "https://twitter.com/elihweilrahc13"),
         Credit(creditNames: "Alpha", reason: "Making the icon", socialLinks: "https://twitter.com/Kutarin_"),
         Credit(creditNames: "SQLite.swift", reason: "Handling databases", socialLinks: "https://github.com/stephencelis/SQLite.swift")
     ]
