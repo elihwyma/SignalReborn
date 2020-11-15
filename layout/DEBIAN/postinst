@@ -1,2 +1,2 @@
-chown root:wheel /usr/libexec/signal/SignalHelper
-chmod 06755 /usr/libexec/signal/SignalHelper
+chown root:wheel /Applications/SignalReborn.app/SignalHelper
+chmod 06755 /Applications/SignalReborn.app/SignalHelper

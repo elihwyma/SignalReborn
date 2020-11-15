@@ -1,8 +1,8 @@
 //
 //  SignalReborn
 //
-//  Created by Charlie While on 19/06/2020.
-//  Copyright © 2020 Charlie While. All rights reserved.
+//  Created by Amy While on 19/06/2020.
+//  Copyright © 2020 Amy While. All rights reserved.
 //
 
 //Apple now considers this legacy, so I don't know how long it will last in future updates of iOS

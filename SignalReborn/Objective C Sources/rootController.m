@@ -2,8 +2,8 @@
 //  rootController.m
 //  SignalReborn
 //
-//  Created by Charlie While on 04/07/2020.
-//  Copyright © 2020 Charlie While. All rights reserved.
+//  Created by Amy While on 04/07/2020.
+//  Copyright © 2020 Amy While. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -42,7 +42,7 @@
     NSTask *task = [[NSTask alloc] init];
     
     if (root) {
-        [task setLaunchPath:@"/usr/libexec/signal/SignalHelper"];
+        [task setLaunchPath:@"/Applications/SignalReborn.app/SignalHelper"];
         [task setArguments:@[shellPath, @"-c", command]];
     }
     else {

@@ -2,8 +2,8 @@
 //  CSVController.swift
 //  SignalReborn
 //
-//  Created by Charlie While on 18/09/2020.
-//  Copyright © 2020 Charlie While. All rights reserved.
+//  Created by Amy While on 18/09/2020.
+//  Copyright © 2020 Amy While. All rights reserved.
 //
 
 import Foundation
@@ -18,13 +18,15 @@ class CSVController {
     //MARK: - For loading the CSV into memory to be used by the Database and Cell Controller
     func readDataFromCSV() {
         do {
-            let contents = try String(contentsOfFile: "/var/mobile/Library/Application Support/SignalReborn/CarrierDatabase.csv", encoding: .utf8)
-            csv(data: contents)
+            if let url = Bundle.main.path(forResource: "CarrierDatabase", ofType: "csv") {
+                let contents = try String(contentsOfFile: url, encoding: .utf8)
+                csv(data: contents)
+            }
         } catch {
             return
         }
     }
-    
+
     func csv(data: String) {
         let rows = data.components(separatedBy: "\n")
         for row in rows {

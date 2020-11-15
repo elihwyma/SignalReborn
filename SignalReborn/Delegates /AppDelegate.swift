@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SignalReborn
 //
-//  Created by Charlie While on 16/06/2020.
-//  Copyright © 2020 Charlie While. All rights reserved.
+//  Created by Amy While on 16/06/2020.
+//  Copyright © 2020 Amy While. All rights reserved.
 //
 
 import UIKit

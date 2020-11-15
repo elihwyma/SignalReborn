@@ -2,8 +2,8 @@
 //  MKAnnotationView.swift
 //  SignalReborn
 //
-//  Created by Charlie While on 26/09/2020.
-//  Copyright © 2020 Charlie While. All rights reserved.
+//  Created by Amy While on 26/09/2020.
+//  Copyright © 2020 Amy While. All rights reserved.
 // This is taken from https://stackoverflow.com/questions/40214778/how-to-show-multiple-lines-in-mkannotation-with-autolayout
 
 import MapKit

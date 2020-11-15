@@ -2,8 +2,8 @@
 //  SecondViewController.swift
 //  SignalReborn
 //
-//  Created by Charlie While on 16/06/2020.
-//  Copyright © 2020 Charlie While. All rights reserved.
+//  Created by Amy While on 16/06/2020.
+//  Copyright © 2020 Amy While. All rights reserved.
 //
 
 import UIKit
@@ -33,7 +33,7 @@ class InformationController: UIViewController {
         InfoPageCell(identifier: "SocialCell", data:
                         ["imageName" : "discord", "label" : "Join my Discord", "link" : "https://discord.gg/KNZRvGe"]),
         InfoPageCell(identifier: "SocialCell", data:
-                        ["imageName" : "CharlieWhile13", "label" : "Follow me on Twitter", "link" : "https://twitter.com/elihweilrahc13"]),
+                        ["imageName" : "TwitterPFP", "label" : "Amy - Follow me on Twitter", "link" : "https://twitter.com/elihweilrahc13"]),
         InfoPageCell(identifier: "SocialCell", data:
                         ["imageName" : "Github", "label" : "View on Github", "link" : "https://github.com/CharlieWhile13/SignalReborn"])
     ]

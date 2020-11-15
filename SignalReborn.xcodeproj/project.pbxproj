@@ -50,7 +50,6 @@
 		533BB981251F860300CBFF0D /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A427A7251BB8910014DB06 /* ButtonCell.xib */; };
 		533BB982251F860300CBFF0D /* SettingsSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A4278C251BAA120014DB06 /* SettingsSwitchCell.xib */; };
 		533BB983251F860300CBFF0D /* SegmentedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A427AD251BC1830014DB06 /* SegmentedCell.xib */; };
-		533BB984251F860300CBFF0D /* SignalEntitlements.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5384F6CE24AE9FE400305F02 /* SignalEntitlements.xml */; };
 		533BB9A02520B0AE00CBFF0D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533BB99F2520B0AD00CBFF0D /* UserDefaults+Extension.swift */; };
 		533BB9A12520B0AE00CBFF0D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533BB99F2520B0AD00CBFF0D /* UserDefaults+Extension.swift */; };
 		5346C2C62514B712009D26A0 /* CSVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5346C2C52514B712009D26A0 /* CSVController.swift */; };
@@ -65,6 +64,10 @@
 		53A427A9251BB8910014DB06 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A427A7251BB8910014DB06 /* ButtonCell.xib */; };
 		53A427AE251BC1840014DB06 /* SegmentedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A427AC251BC1830014DB06 /* SegmentedCell.swift */; };
 		53A427AF251BC1840014DB06 /* SegmentedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A427AD251BC1830014DB06 /* SegmentedCell.xib */; };
+		53A6742125608C9500DA6FCB /* CarrierDatabase.csv in Resources */ = {isa = PBXBuildFile; fileRef = 53A6742025608C8E00DA6FCB /* CarrierDatabase.csv */; };
+		53A6742225608C9500DA6FCB /* CarrierDatabase.csv in Resources */ = {isa = PBXBuildFile; fileRef = 53A6742025608C8E00DA6FCB /* CarrierDatabase.csv */; };
+		53A6742A2560929200DA6FCB /* SignalHelper in Resources */ = {isa = PBXBuildFile; fileRef = 53A674292560928F00DA6FCB /* SignalHelper */; };
+		53A6742B2560929200DA6FCB /* SignalHelper in Resources */ = {isa = PBXBuildFile; fileRef = 53A674292560928F00DA6FCB /* SignalHelper */; };
 		53B3668D251407C700B7B374 /* SignalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3668C251407C700B7B374 /* SignalController.swift */; };
 		53B3668F2514095200B7B374 /* NSNotification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3668E2514095200B7B374 /* NSNotification+Extension.swift */; };
 		5672E5E03EC5AE1B31CDDC23 /* Pods_SignalReborn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997F685939BDCA5797A25263 /* Pods_SignalReborn.framework */; };
@@ -106,6 +109,8 @@
 		53A427A7251BB8910014DB06 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		53A427AC251BC1830014DB06 /* SegmentedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCell.swift; sourceTree = "<group>"; };
 		53A427AD251BC1830014DB06 /* SegmentedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedCell.xib; sourceTree = "<group>"; };
+		53A6742025608C8E00DA6FCB /* CarrierDatabase.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CarrierDatabase.csv; sourceTree = "<group>"; };
+		53A674292560928F00DA6FCB /* SignalHelper */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = SignalHelper; sourceTree = "<group>"; };
 		53B3668C251407C700B7B374 /* SignalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalController.swift; sourceTree = "<group>"; };
 		53B3668E2514095200B7B374 /* NSNotification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extension.swift"; sourceTree = "<group>"; };
 		997F685939BDCA5797A25263 /* Pods_SignalReborn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignalReborn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,7 +247,9 @@
 		5367082C24994734006BF88C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				53A6742025608C8E00DA6FCB /* CarrierDatabase.csv */,
 				53390B552498BE4E002CA74E /* Main.storyboard */,
+				53A674292560928F00DA6FCB /* SignalHelper */,
 				53390B582498BE58002CA74E /* Assets.xcassets */,
 				53390B5A2498BE58002CA74E /* LaunchScreen.storyboard */,
 			);
@@ -401,10 +408,12 @@
 				53390B5C2498BE58002CA74E /* LaunchScreen.storyboard in Resources */,
 				53A427A2251BB4FC0014DB06 /* InfoCell.xib in Resources */,
 				53390B592498BE58002CA74E /* Assets.xcassets in Resources */,
+				53A6742125608C9500DA6FCB /* CarrierDatabase.csv in Resources */,
 				53390B572498BE4E002CA74E /* Main.storyboard in Resources */,
 				532F40492527FFAB008BED0F /* SocialCell.xib in Resources */,
 				53A427A9251BB8910014DB06 /* ButtonCell.xib in Resources */,
 				53A4278E251BAA120014DB06 /* SettingsSwitchCell.xib in Resources */,
+				53A6742A2560929200DA6FCB /* SignalHelper in Resources */,
 				53A427AF251BC1840014DB06 /* SegmentedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,13 +424,14 @@
 			files = (
 				533BB97D251F860300CBFF0D /* LaunchScreen.storyboard in Resources */,
 				533BB97E251F860300CBFF0D /* InfoCell.xib in Resources */,
+				53A6742B2560929200DA6FCB /* SignalHelper in Resources */,
+				53A6742225608C9500DA6FCB /* CarrierDatabase.csv in Resources */,
 				533BB97F251F860300CBFF0D /* Assets.xcassets in Resources */,
 				533BB980251F860300CBFF0D /* Main.storyboard in Resources */,
 				532F404A2527FFAB008BED0F /* SocialCell.xib in Resources */,
 				533BB981251F860300CBFF0D /* ButtonCell.xib in Resources */,
 				533BB982251F860300CBFF0D /* SettingsSwitchCell.xib in Resources */,
 				533BB983251F860300CBFF0D /* SegmentedCell.xib in Resources */,
-				533BB984251F860300CBFF0D /* SignalEntitlements.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,8 +730,8 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.SignalReborn;
+				MARKETING_VERSION = 2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalReborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -751,8 +761,8 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.SignalReborn;
+				MARKETING_VERSION = 2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalReborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -780,9 +790,9 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.1;
 				OTHER_SWIFT_FLAGS = "-D jailed $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.SignalReborn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalReborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -811,9 +821,9 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.1;
 				OTHER_SWIFT_FLAGS = "-D jailed $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.SignalReborn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalReborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
