@@ -97,8 +97,8 @@
 		533BB989251F860300CBFF0D /* Jailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jailed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		533BB99F2520B0AD00CBFF0D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		5346C2C52514B712009D26A0 /* CSVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVController.swift; sourceTree = "<group>"; };
+		535B2B882561673D001E3572 /* SignalReborn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignalReborn-Bridging-Header.h"; sourceTree = "<group>"; };
 		5367082424994047006BF88C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		5367082624994254006BF88C /* SignalReborn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignalReborn-Bridging-Header.h"; sourceTree = "<group>"; };
 		537DF7BC251E601200693780 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		537F041F249C451500EAC7FA /* SRMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRMonitor.h; sourceTree = "<group>"; };
 		537F0420249C452500EAC7FA /* SRMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRMonitor.m; sourceTree = "<group>"; };
@@ -196,13 +196,13 @@
 		53390B4C2498BE4E002CA74E /* SignalReborn */ = {
 			isa = PBXGroup;
 			children = (
+				535B2B882561673D001E3572 /* SignalReborn-Bridging-Header.h */,
 				53B36689251405BD00B7B374 /* Backend */,
 				530B7F4524B22176003DD58E /* Custom Cells */,
 				530B3EB0249EEE9F00BE4276 /* Custom Map Views */,
 				53390B5D2498BE58002CA74E /* Info.plist */,
 				5367082B2499470A006BF88C /* Delegates  */,
 				5367082A249946FC006BF88C /* View Controllers */,
-				5367082624994254006BF88C /* SignalReborn-Bridging-Header.h */,
 				5367082D2499477B006BF88C /* Objective C Sources */,
 			);
 			path = SignalReborn;

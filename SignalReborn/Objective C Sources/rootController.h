@@ -12,4 +12,5 @@
 - (NSString *_Nullable)runCommandInPath:(NSString *_Nonnull)command asRoot:(BOOL)sling;
 - (NSString *_Nullable)locateCommandInPath:(NSString *_Nullable)command shell:(NSString *_Nullable)shellPath;
 - (void)purge;
+- (void)justCheckHelperExists;
 @end
