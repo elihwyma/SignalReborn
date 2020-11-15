@@ -735,7 +735,7 @@
 					/usr/lib/libswift/stable,
 				);
 				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalRebornBeta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.signalreborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -766,7 +766,7 @@
 					/usr/lib/libswift/stable,
 				);
 				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalRebornBeta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.signalreborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
