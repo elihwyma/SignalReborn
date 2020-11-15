@@ -17,12 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         #if jailed
-        //SignalController.shared.jailedInfo()
+        SignalController.shared.jailedInfo()
         #else
-        //SignalController.shared.setup()
-        //SignalController.shared.getInfo()
+        SignalController.shared.setup()
+        SignalController.shared.getInfo()
         #endif
-        //CSVController.shared.readDataFromCSV()
+        CSVController.shared.readDataFromCSV()
         
         return true
     }
