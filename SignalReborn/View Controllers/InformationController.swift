@@ -11,6 +11,8 @@ import UIKit
 class InformationController: UIViewController {
   
     @IBOutlet weak var tableView: UITableView!
+    var containerView = UIView()
+    var popupView: AppIconPopover = .fromNib()
       
 //MARK: - Actually getting the info setup for the table
     
@@ -39,6 +41,8 @@ class InformationController: UIViewController {
     ]
     
     private let buttons: [InfoPageCell] = [
+        InfoPageCell(identifier: "ButtonCell", data:
+                        ["buttonName" : "App Icon", "notificationName" : "AppIcon"]),
         InfoPageCell(identifier: "ButtonCell", data:
                         ["buttonName" : "Credits", "notificationName" : "ShowCredits"]),
         InfoPageCell(identifier: "ButtonCell", data:
@@ -96,9 +100,44 @@ class InformationController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(showCredits), name: NSNotification.Name(rawValue: "ShowCredits"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(purge), name: NSNotification.Name(rawValue: "PurgeDatabase"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(hidePopup), name: .HidePopup, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showPopup), name: NSNotification.Name(rawValue: "AppIcon"), object: nil)
     }
     
-    
+    //MARK: - Popup Shit
+    @objc func hidePopup() {
+        let deadBounds = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: self.view.frame.height)
+        
+        UIView.animate(withDuration: 1.0,
+                         delay: 0, usingSpringWithDamping: 1.0,
+                         initialSpringVelocity: 1.0,
+                         options: .curveEaseInOut, animations: {
+                            self.containerView.alpha = 0
+                            self.popupView.frame = deadBounds
+                         }, completion: { (value: Bool) in
+                            self.popupView.removeFromSuperview()
+                            self.containerView.removeFromSuperview()
+          })
+    }
+
+    @objc private func showPopup() {
+        self.containerView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
+        self.containerView.frame = self.view.frame
+        self.containerView.alpha = 0
+        self.view.addSubview(containerView)
+
+        let deadBounds = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: self.view.frame.height)
+        self.popupView.frame = deadBounds
+        self.view.addSubview(popupView)
+
+        UIView.animate(withDuration: 0.5,
+                         delay: 0, usingSpringWithDamping: 1.0,
+                         initialSpringVelocity: 1.0,
+                         options: .curveEaseInOut, animations: {
+                            self.containerView.alpha = 0.95
+                            self.popupView.frame = self.view.bounds
+          }, completion: nil)
+    }
 }
 
 extension InformationController {
