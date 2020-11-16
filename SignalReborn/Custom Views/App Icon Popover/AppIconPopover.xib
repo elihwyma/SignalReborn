@@ -20,19 +20,28 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="394" placeholderIntrinsicHeight="250" translatesAutoresizingMaskIntoConstraints="NO" id="EvG-pU-Zsl" userLabel="Popover">
-                    <rect key="frame" x="10" y="558" width="394" height="250"/>
+                    <rect key="frame" x="10" y="648" width="394" height="150"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pkE-27-Jc8" customClass="FancyTableView" customModule="Jailed" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="394" height="250"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCj-nN-fNk">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="150"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pkE-27-Jc8" customClass="FancyTableView" customModule="Jailed" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="150"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="pkE-27-Jc8" secondAttribute="trailing" id="3Sg-4I-sWX"/>
+                        <constraint firstItem="cCj-nN-fNk" firstAttribute="top" secondItem="EvG-pU-Zsl" secondAttribute="top" id="ENA-ff-UAh"/>
                         <constraint firstItem="pkE-27-Jc8" firstAttribute="leading" secondItem="EvG-pU-Zsl" secondAttribute="leading" id="EwZ-1X-Ru5"/>
+                        <constraint firstItem="cCj-nN-fNk" firstAttribute="leading" secondItem="EvG-pU-Zsl" secondAttribute="leading" id="FoV-CS-uP8"/>
+                        <constraint firstAttribute="bottom" secondItem="cCj-nN-fNk" secondAttribute="bottom" id="KY6-db-gF1"/>
+                        <constraint firstAttribute="height" constant="150" id="aeG-X7-lDa"/>
                         <constraint firstAttribute="bottom" secondItem="pkE-27-Jc8" secondAttribute="bottom" id="gsJ-wr-xP0"/>
                         <constraint firstItem="pkE-27-Jc8" firstAttribute="top" secondItem="EvG-pU-Zsl" secondAttribute="top" id="vhH-9k-Y05"/>
+                        <constraint firstAttribute="trailing" secondItem="cCj-nN-fNk" secondAttribute="trailing" id="ykH-UK-V50"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
@@ -51,11 +60,12 @@
                 <constraint firstAttribute="bottom" secondItem="1AK-DO-SVf" secondAttribute="bottom" id="N9l-ep-LUt"/>
                 <constraint firstItem="EvG-pU-Zsl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="ViO-jX-ik0"/>
                 <constraint firstAttribute="trailing" secondItem="1AK-DO-SVf" secondAttribute="trailing" id="XkY-9M-K9u"/>
-                <constraint firstItem="EvG-pU-Zsl" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-5" id="lWR-Ue-KBC"/>
+                <constraint firstItem="EvG-pU-Zsl" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-15" id="lWR-Ue-KBC"/>
             </constraints>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <connections>
                 <outlet property="background" destination="1AK-DO-SVf" id="Sxs-Lv-TN2"/>
+                <outlet property="blurView" destination="cCj-nN-fNk" id="gYW-PN-38f"/>
                 <outlet property="tableView" destination="pkE-27-Jc8" id="ldz-zk-xQz"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
