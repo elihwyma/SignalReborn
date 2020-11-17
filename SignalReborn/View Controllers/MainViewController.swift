@@ -19,11 +19,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var debugButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
     
-    let regionInMeters: Double = 500
-    let locationManager = CLLocationManager()
-    
     var locationsAdded = 0
-    var currentLocation: CLLocationCoordinate2D?
+    let regionInMeters: Double = 500
     var hasDebugged = false
     
     @IBAction func centerButton(_ sender: Any) {
@@ -38,7 +35,6 @@ class MainViewController: UIViewController {
     
     func setup() {
         self.mapView.delegate = self
-        self.checkLocationServices()
         self.hideMapWatermarks()
         self.defineMapType()
         
@@ -66,6 +62,8 @@ class MainViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(defineMapType), name: .ChangeMapType, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(hideMapWatermarks), name: .HideMapWatermarks, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(authorized), name: .Authorized, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(addLines), name: .AddLines, object: nil)
         
         if !self.hasDebugged {
             if DatabaseManager.shared.cells.count == 0 {
@@ -75,13 +73,18 @@ class MainViewController: UIViewController {
         }
     }
     
+    @objc func authorized() {
+        mapView.showsUserLocation = true
+        centerViewOnUserLocation()
+    }
+    
     //MARK: - Adding the lines and annotations on the map
     @objc func addLines() {
         let overlays = mapView.overlays
         
         for (index, _) in CellInfo.shared.lat.enumerated() {
             let servingLocation = CLLocationCoordinate2D(latitude: CellInfo.shared.lat[index], longitude: CellInfo.shared.lon[index])
-            let servingLine: [CLLocationCoordinate2D] = [self.currentLocation!, servingLocation]
+            let servingLine: [CLLocationCoordinate2D] = [LocationManager.shared.currentLocation!, servingLocation]
             let servingMapLine = currentServing(coordinates: servingLine, count: servingLine.count)
             mapView.addOverlay(servingMapLine)
         }
@@ -104,7 +107,7 @@ class MainViewController: UIViewController {
         
         self.mapView.removeAnnotations(allAnnotations)
         
-        if self.currentLocation != nil {
+        if LocationManager.shared.currentLocation != nil {
             self.addLines()
         }
     }
@@ -146,14 +149,14 @@ class MainViewController: UIViewController {
         let debugAlert = UIAlertController(title: "Full Info", message: "Locations Added: \(self.locationsAdded), Cells: \(SignalController.shared.cellInfo), Serving: \(CellInfo.shared.lat), \(CellInfo.shared.lon)", preferredStyle: .alert)
         debugAlert.addAction(UIAlertAction(title: ":)", style: .default, handler: nil))
         self.present(debugAlert, animated: true)
-
     }
     
-}
-
-// MARK: - Stuff needed for the MapView
-
-extension MainViewController: CLLocationManagerDelegate {
+    func centerViewOnUserLocation() {
+        if let location = LocationManager.shared.locationManager.location?.coordinate {
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    }
     
     func clearOverlays() {
         let overlays = mapView.overlays
@@ -163,15 +166,6 @@ extension MainViewController: CLLocationManagerDelegate {
     func clearAnnotations() {
         let allAnnotations = self.mapView.annotations
         self.mapView.removeAnnotations(allAnnotations)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.currentLocation = locationManager.location?.coordinate
-        self.addLines()
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkLocationAuthorisation()
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -207,8 +201,10 @@ extension MainViewController: CLLocationManagerDelegate {
         
         return nil
     }
+    
 }
 
+//MARK: - Map View Delegate
 extension MainViewController: MKMapViewDelegate {
     
     @objc func defineMapType() {
@@ -251,48 +247,6 @@ extension MainViewController: MKMapViewDelegate {
         } else {
             legalLabel?.isHidden = false
             logoView?.isHidden = false
-        }
-    }
-    
-    func setupLocationManager() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-    }
-    
-    func centerViewOnUserLocation() {
-        if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-            mapView.setRegion(region, animated: true)
-        }
-    }
-    
-    func checkLocationServices() {
-        if CLLocationManager.locationServicesEnabled() {
-            setupLocationManager()
-            checkLocationAuthorisation()
-        }
-    }
-       
-    func checkLocationAuthorisation() {
-        switch CLLocationManager.authorizationStatus() {
-        case .authorizedWhenInUse:
-            mapView.showsUserLocation = true
-            locationManager.startUpdatingLocation()
-            centerViewOnUserLocation()
-            self.currentLocation = locationManager.location?.coordinate
-            break
-        case .denied:
-            //Oof
-            break
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-        case .restricted:
-            //lol not happening bruv
-            break
-        case .authorizedAlways:
-            break
-        @unknown default:
-            break
         }
     }
 }
