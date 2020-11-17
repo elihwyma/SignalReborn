@@ -1,14 +1,11 @@
 export ARCHS = arm64 arm64e
-export THEOS_DEVICE_IP=192.168.0.85
+export TARGET = iphone:clang:13.3:11.0
+# export PREFIX = $(THEOS)/toolchain/Xcode.xctoolchain/usr/bin/
+
+#DEBUG = 0
+#FINALPACKAGE = 1
+#PACKAGE_VERSION = $(THEOS_PACKAGE_BASE_VERSION)
 
 include $(THEOS)/makefiles/common.mk
-
-XCODEPROJ_NAME = SignalReborn
-
-SignalReborn_CODESIGN_FLAGS = -SSignalEntitlements.xml
-#SignalReborn_XCODE_SCHEME = Jailed
-
-include $(THEOS_MAKE_PATH)/xcodeproj.mk
-
-after-install::
-	install.exec 'uicache -p /Applications/SignalReborn.app'
+SUBPROJECTS += src/Signal-App
+include $(THEOS_MAKE_PATH)/aggregate.mk

@@ -96,6 +96,8 @@
 		53B3668F2514095200B7B374 /* NSNotification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3668E2514095200B7B374 /* NSNotification+Extension.swift */; };
 		53EC776325640BC7002B41AD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC776225640BC7002B41AD /* LocationManager.swift */; };
 		53EC776425640BC7002B41AD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC776225640BC7002B41AD /* LocationManager.swift */; };
+		53EC776C25641525002B41AD /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC776B25641525002B41AD /* CLLocationCoordinate2D.swift */; };
+		53EC776D25641525002B41AD /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC776B25641525002B41AD /* CLLocationCoordinate2D.swift */; };
 		5672E5E03EC5AE1B31CDDC23 /* Pods_SignalReborn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997F685939BDCA5797A25263 /* Pods_SignalReborn.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +153,7 @@
 		53B3668C251407C700B7B374 /* SignalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalController.swift; sourceTree = "<group>"; };
 		53B3668E2514095200B7B374 /* NSNotification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extension.swift"; sourceTree = "<group>"; };
 		53EC776225640BC7002B41AD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		53EC776B25641525002B41AD /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		997F685939BDCA5797A25263 /* Pods_SignalReborn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignalReborn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F83CCDC98991318424C35E /* Pods-SignalReborn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalReborn.debug.xcconfig"; path = "Target Support Files/Pods-SignalReborn/Pods-SignalReborn.debug.xcconfig"; sourceTree = "<group>"; };
 		ECFEB69D5E89F859302B2BF0 /* Pods-SignalReborn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalReborn.release.xcconfig"; path = "Target Support Files/Pods-SignalReborn/Pods-SignalReborn.release.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +291,7 @@
 				533BB95F251F4BC400CBFF0D /* MKAnnotationView+Extension.swift */,
 				533BB99F2520B0AD00CBFF0D /* UserDefaults+Extension.swift */,
 				5372D7AD2561E1BD000866F7 /* UIView+Extensions.swift */,
+				53EC776B25641525002B41AD /* CLLocationCoordinate2D.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -665,6 +669,7 @@
 				530B7F4D24B26491003DD58E /* creditsCell.swift in Sources */,
 				532256C62561D7A60035788F /* AppIconPopover.swift in Sources */,
 				53EC776325640BC7002B41AD /* LocationManager.swift in Sources */,
+				53EC776C25641525002B41AD /* CLLocationCoordinate2D.swift in Sources */,
 				537F0421249C452500EAC7FA /* SRMonitor.m in Sources */,
 				533BB960251F4BC400CBFF0D /* MKAnnotationView+Extension.swift in Sources */,
 				53B3668D251407C700B7B374 /* SignalController.swift in Sources */,
@@ -697,6 +702,7 @@
 				533BB965251F860300CBFF0D /* creditsCell.swift in Sources */,
 				532256C72561D7A60035788F /* AppIconPopover.swift in Sources */,
 				53EC776425640BC7002B41AD /* LocationManager.swift in Sources */,
+				53EC776D25641525002B41AD /* CLLocationCoordinate2D.swift in Sources */,
 				533BB966251F860300CBFF0D /* SRMonitor.m in Sources */,
 				533BB968251F860300CBFF0D /* MKAnnotationView+Extension.swift in Sources */,
 				533BB969251F860300CBFF0D /* SignalController.swift in Sources */,
