@@ -5,7 +5,7 @@
 ![GitHub](https://img.shields.io/github/license/CharlieWhile13/SignalReborn?color=purple)
 ---
 ### Current Version
-2.0.2
+2.1
 ### Where to download
  - [iOS Repository](https://repo.packix.com/)
  - [Signal Reborn on Packix](https://repo.packix.com/package/com.charliewhile.signalreborn/)
