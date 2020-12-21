@@ -17,6 +17,7 @@ class SignalController {
     static let connection = SignalController.sharedMonitor.setupServerAndNotifications()
     
     var cellInfo: [[String : Any]] = []
+    var devmode = false
     
     //MARK: - General setup
     func sendAlertication(title: String, message: String, okButton: String, sender: UIViewController) {
@@ -29,6 +30,12 @@ class SignalController {
         NotificationCenter.default.addObserver(self, selector: #selector(getInfo), name: .CellUpdateNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(getInfo), name: .RefreshCellNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(fuckyWucky), name: .FuckyWucky, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.devMode(_:)), name: .ToggleDevMode, object: nil)
+    }
+    
+    @objc private func devMode(_ notification: NSNotification) {
+        self.devmode = notification.userInfo?["enable"] as! Bool
+        NotificationCenter.default.post(name: .HardRefresh, object: nil)
     }
     
     //MARK: - This will work if your running with entitlements or not

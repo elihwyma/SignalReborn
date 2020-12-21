@@ -90,8 +90,6 @@
 		53A6742225608C9500DA6FCB /* CarrierDatabase.csv in Resources */ = {isa = PBXBuildFile; fileRef = 53A6742025608C8E00DA6FCB /* CarrierDatabase.csv */; };
 		53A6742A2560929200DA6FCB /* SignalHelper in Resources */ = {isa = PBXBuildFile; fileRef = 53A674292560928F00DA6FCB /* SignalHelper */; };
 		53A6742B2560929200DA6FCB /* SignalHelper in Resources */ = {isa = PBXBuildFile; fileRef = 53A674292560928F00DA6FCB /* SignalHelper */; };
-		53A674302560B30400DA6FCB /* SignalEntitlements.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5384F6CE24AE9FE400305F02 /* SignalEntitlements.xml */; };
-		53A674372560B58400DA6FCB /* SignalEntitlements.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5384F6CE24AE9FE400305F02 /* SignalEntitlements.xml */; };
 		53B3668D251407C700B7B374 /* SignalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3668C251407C700B7B374 /* SignalController.swift */; };
 		53B3668F2514095200B7B374 /* NSNotification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B3668E2514095200B7B374 /* NSNotification+Extension.swift */; };
 		53EC776325640BC7002B41AD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC776225640BC7002B41AD /* LocationManager.swift */; };
@@ -534,7 +532,6 @@
 			files = (
 				5372D7CA2562A7F5000866F7 /* PurpleIcon~ipad@3x.png in Resources */,
 				5372D7C82562A7F5000866F7 /* PurpleIcon@3x.png in Resources */,
-				53A674302560B30400DA6FCB /* SignalEntitlements.xml in Resources */,
 				53390B5C2498BE58002CA74E /* LaunchScreen.storyboard in Resources */,
 				5372D7CC2562A7F5000866F7 /* PurpleIcon~ipad@2x.png in Resources */,
 				53A427A2251BB4FC0014DB06 /* InfoCell.xib in Resources */,
@@ -559,7 +556,6 @@
 			files = (
 				5372D7CB2562A7F5000866F7 /* PurpleIcon~ipad@3x.png in Resources */,
 				5372D7C92562A7F5000866F7 /* PurpleIcon@3x.png in Resources */,
-				53A674372560B58400DA6FCB /* SignalEntitlements.xml in Resources */,
 				533BB97D251F860300CBFF0D /* LaunchScreen.storyboard in Resources */,
 				5372D7CD2562A7F5000866F7 /* PurpleIcon~ipad@2x.png in Resources */,
 				533BB97E251F860300CBFF0D /* InfoCell.xib in Resources */,
@@ -886,7 +882,7 @@
 					/usr/lib/libswift/stable,
 				);
 				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.signalreborn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.signalreborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -917,7 +913,7 @@
 					/usr/lib/libswift/stable,
 				);
 				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewhile.signalreborn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.signalreborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

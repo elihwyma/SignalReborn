@@ -28,7 +28,7 @@ class InformationController: UIViewController {
         InfoPageCell(identifier: "SettingsSwitchCell", data:
                         ["prefsName" : "HideOtherCarriers", "cellName" : "Hide Other Carriers", "notificationName" : "refreshAnnotations", "default" : true]),
         InfoPageCell(identifier: "SettingsSwitchCell", data:
-                        ["prefsName" : "HideMapWatermarks", "cellName" : "Hide Map Watermarks", "notificationName" : "HideMapWatermarks", "default" : true])
+                        ["prefsName" : "HideMapWatermarks", "cellName" : "Hide Map Watermarks", "notificationName" : "HideMapWatermarks", "default" : true]),
     ]
     
     private let socials: [InfoPageCell] = [
@@ -102,6 +102,9 @@ class InformationController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(purge), name: NSNotification.Name(rawValue: "PurgeDatabase"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(hidePopup), name: .HidePopup, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showPopup), name: NSNotification.Name(rawValue: "AppIcon"), object: nil)
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.devModeToggle))
+        self.tableView.addGestureRecognizer(longPress)
     }
     
     //MARK: - Popup Shit
@@ -137,6 +140,32 @@ class InformationController: UIViewController {
                             self.containerView.alpha = 0.95
                             self.popupView.frame = self.view.bounds
           }, completion: nil)
+    }
+    
+    @objc func devModeToggle(longPressGestureRecognizer: UILongPressGestureRecognizer) {
+        if longPressGestureRecognizer.state == UIGestureRecognizer.State.began {
+            let touchPoint = longPressGestureRecognizer.location(in: tableView)
+            if let indexPath = tableView.indexPathForRow(at: touchPoint) {
+                let shownCell = self.toShow[indexPath.section][indexPath.row]
+                if shownCell.identifier == "SocialCell" {
+                    if (shownCell.data["imageName"] as! String) == "TwitterPFP" {
+                        let alert = UIAlertController(title: "Developer Mode", message: "Enabling this will enable features that are either broken or unfinished. It will also disable the accuracy filter on cells. Restarting the app will disable this.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Enable", style: .destructive, handler: { action in
+                            if !SignalController.shared.devmode {
+                                let userInfo: [String : Any] = ["enable" : true]
+                                NotificationCenter.default.post(name: .ToggleDevMode, object: nil, userInfo: userInfo)
+                            }
+                        }))
+                        alert.addAction(UIAlertAction(title: "Disable", style: .cancel, handler: nil))
+                            if SignalController.shared.devmode {
+                                let userInfo: [String : Any] = ["enable" : false]
+                                NotificationCenter.default.post(name: .ToggleDevMode, object: nil, userInfo: userInfo)
+                            }
+                        self.present(alert, animated: true)
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -1,5 +1,6 @@
 export ARCHS = arm64 arm64e
-export THEOS_DEVICE_IP=192.168.0.85
+#export THEOS_DEVICE_IP=192.168.0.85
+export PREFIX = $(THEOS)/toolchain/Xcode.xctoolchain/usr/bin/
 
 include $(THEOS)/makefiles/common.mk
 

@@ -50,6 +50,8 @@ class DatabaseManager {
     //MARK: - What converts the table into codable cells
     func prepareCells() {
         do {
+            self.cells.removeAll()
+            
             let lteCellTable = Table("LteCellLocation")
             let gsmCellTable = Table("CellLocation")
             let cdmaCellTable = Table("CdmaCellLocation")
@@ -67,13 +69,15 @@ class DatabaseManager {
             let gsmCells = try DatabaseManager.shared.database.prepare(gsmCellTable)
             let cdmaCells = try DatabaseManager.shared.database.prepare(cdmaCellTable)
             
+            let accuracy = SignalController.shared.devmode
+            
             for cell in lteCells {
                 let lat = CLLocationDegrees(cell[Latitude])
                 let lon = CLLocationDegrees(cell[Longitude])
                 let id = cell[cellID]
                 let confidence = cell[confidence]
                 
-                if id != -1 {
+                if id != -1 || accuracy {
                     let mnc = cell[MNC]
                     let mcc = cell[MCC]
                     var isFound = false
@@ -99,7 +103,7 @@ class DatabaseManager {
                 let id = cell[cellID]
                 let confidence = cell[confidence]
                 
-                if id != -1 {
+                if id != -1 || accuracy {
                     let mcc = cell[MCC]
                     let mnc = cell[MNC]
                     var isFound = false
