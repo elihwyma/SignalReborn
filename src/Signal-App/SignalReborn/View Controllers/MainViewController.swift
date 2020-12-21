@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
     }
     
     func setup() {
+        LocationManager.shared.checkLocationServices()
         self.mapView.delegate = self
         self.hideMapWatermarks()
         self.defineMapType()
@@ -48,9 +49,7 @@ class MainViewController: UIViewController {
         }
 
         if DatabaseManager.shared.copyTheDatabase() {
-            DatabaseManager.shared.prepareCells()
-            SignalController.shared.getInfo()
-            self.addAnnotationsAndCells()
+            self.hardRefresh()
         }
                 
         if CellInfo.shared.mnc == 0 {
@@ -65,6 +64,8 @@ class MainViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(authorized), name: .Authorized, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(addLines), name: .AddLines, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(hardRefresh), name: .HardRefresh, object: nil)
+        
         if !self.hasDebugged {
             if DatabaseManager.shared.cells.count == 0 {
                 self.hasDebugged = true
@@ -73,13 +74,19 @@ class MainViewController: UIViewController {
         }
     }
     
+    @objc private func hardRefresh() {
+        DatabaseManager.shared.prepareCells()
+        SignalController.shared.getInfo()
+        self.addAnnotationsAndCells()
+    }
+    
     @objc func authorized() {
         mapView.showsUserLocation = true
         centerViewOnUserLocation()
     }
     
     //MARK: - Adding the lines and annotations on the map
-    @objc func addLines() {
+    @objc private func addLines() {
         let overlays = mapView.overlays
         
         for (index, _) in CellInfo.shared.lat.enumerated() {
@@ -92,7 +99,7 @@ class MainViewController: UIViewController {
         mapView.removeOverlays(overlays)
     }
 
-    @objc func addAnnotationsAndCells() {
+    @objc private func addAnnotationsAndCells() {
         let showLTE = UserDefaults.standard.getBoolWithDefault(key: "ShowLTE", defaultValue: true)
         let showGSM = UserDefaults.standard.getBoolWithDefault(key: "ShowGSM", defaultValue: false)
         let showCDMA = UserDefaults.standard.getBoolWithDefault(key: "ShowCDMA", defaultValue: false)
@@ -112,7 +119,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    func addAnnotation(lat: CLLocationDegrees, lon: CLLocationDegrees, cellID: Int, MNC: Int, MCC: Int, type: String, carrier: String, iso: String, cc: Int, confidence: Int, tac: Int) {
+    private func addAnnotation(lat: CLLocationDegrees, lon: CLLocationDegrees, cellID: Int, MNC: Int, MCC: Int, type: String, carrier: String, iso: String, cc: Int, confidence: Int, tac: Int) {
         
         if UserDefaults.standard.getBoolWithDefault(key: "HideOtherCarriers", defaultValue: true) {
             if CellInfo.shared.mnc != MNC || CellInfo.shared.mcc != MCC {
@@ -135,11 +142,11 @@ class MainViewController: UIViewController {
         }
 
         if !serving {
-            pin = CellAnnotation(pinTitle: "Nearby \(type)", lines: (["ID: \(cellID)", "MCC: \(MCC)", "MNC: \(MNC)", "Confidence: \(confidence)"] + extraLines), location: location, image: "nearby\(type)")
+            pin = CellAnnotation(pinTitle: "Nearby \(type)", lines: (["ID: \(cellID)", "MCC: \(MCC)", "MNC: \(MNC)", "Confidence: \(confidence)"] + extraLines), location: location, image: "nearby\(type)", carrier: carrier)
         } else {
-            pin = CellAnnotation(pinTitle: "Serving \(type)", lines: (["ID: \(cellID)", "MCC: \(MCC)", "MNC: \(MNC)", "Confidence: \(confidence)"] + extraLines), location: location, image: "serving\(type)")
+            pin = CellAnnotation(pinTitle: "Serving \(type)", lines: (["ID: \(cellID)", "MCC: \(MCC)", "MNC: \(MNC)", "Confidence: \(confidence)"] + extraLines), location: location, image: "serving\(type)", carrier: carrier)
         }
-
+        
         self.mapView.addAnnotation(pin)
     }
     
@@ -191,11 +198,16 @@ class MainViewController: UIViewController {
             return nil
         }
         
-        if annotation is CellAnnotation {
+        if let uwu = annotation as? CellAnnotation {
             let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "CellAnnotation")
-            annotationView.image = UIImage(named: (annotation as! CellAnnotation).image!)
+            annotationView.image = UIImage(named: uwu.image!)
             annotationView.canShowCallout = true
-            annotationView.loadCustomLines(customLines: (annotation as! CellAnnotation).lines!)
+            annotationView.loadCustomLines(customLines: uwu.lines!)
+            
+            if SignalController.shared.devmode {
+                annotationView.clusteringIdentifier = uwu.carrier
+            }
+            
             return annotationView
         }
         

@@ -23,11 +23,13 @@ class CellAnnotation: NSObject, MKAnnotation {
     var title: String?
     var lines: [String]?
     var image: String?
+    var carrier: String?
     
-    init(pinTitle:String, lines: [String], location: CLLocationCoordinate2D, image: String) {
+    init(pinTitle:String, lines: [String], location: CLLocationCoordinate2D, image: String, carrier: String) {
         self.title = pinTitle
         self.lines = lines
         self.coordinate = location
         self.image = image
+        self.carrier = carrier
     }
 }

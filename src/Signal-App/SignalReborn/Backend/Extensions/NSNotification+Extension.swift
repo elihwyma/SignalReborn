@@ -15,7 +15,10 @@ extension NSNotification.Name {
     static let HideMapWatermarks = Notification.Name("HideMapWatermarks")
     static let FuckyWucky = Notification.Name("FuckyWucky")
     static let HidePopup = Notification.Name("HideAppIconSelector")
+    static let HardRefresh = Notification.Name("HardRefresh")
     
     static let AddLines = Notification.Name("AddLines")
     static let Authorized = Notification.Name("Authorized")
+    
+    static let ToggleDevMode = Notification.Name("ToggleDevMode")
 }

@@ -30,12 +30,7 @@ int CellMonitorCallback(id connection, CFStringRef string, CFDictionaryRef dicti
     CFArrayRef cells = NULL;
     _CTServerConnectionCellMonitorCopyCellInfo(CTConnection, (void*)&tmp, &cells);
     NSArray *cellArray = (__bridge NSArray*)cells;
-    
-    if (cellArray != NULL) {
-        return cellArray;
-    } else {
-        return NULL;
-    }
+    return cellArray;
 }
 @end
 

@@ -1,6 +1,8 @@
-export ARCHS = arm64 arm64e
+#export ARCHS = arm64 arm64e
 export TARGET = iphone:clang:13.3:11.0
-# export PREFIX = $(THEOS)/toolchain/Xcode.xctoolchain/usr/bin/
+#export PREFIX = $(THEOS)/toolchain/Xcode.xctoolchain/usr/bin/
+export THEOS_DEVICE_IP=192.168.0.85
+INSTALL_TARGET_PROCESSES = SpringBoard
 
 #DEBUG = 0
 #FINALPACKAGE = 1
