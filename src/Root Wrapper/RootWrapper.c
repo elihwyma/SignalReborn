@@ -41,7 +41,7 @@ int main(int argc, char ** argv) {
   patch_setuidandplatformize();
 
   struct stat template;
-  if (lstat("/Applications/SignalReborn.app/SignalReborn", &template) == -1) {
+  if (lstat("/Applications/Signal.app/Signal", &template) == -1) {
     printf("Error\n");
     fflush(stdout);
     return EX_NOPERM;

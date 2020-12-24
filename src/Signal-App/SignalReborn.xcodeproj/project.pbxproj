@@ -114,7 +114,7 @@
 		5327204724B3C1530098EB90 /* helpTheCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpTheCache.swift; sourceTree = "<group>"; };
 		532F40452527FFAB008BED0F /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
 		532F40462527FFAB008BED0F /* SocialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialCell.xib; sourceTree = "<group>"; };
-		53390B4A2498BE4E002CA74E /* SignalReborn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignalReborn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53390B4A2498BE4E002CA74E /* Signal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53390B4D2498BE4E002CA74E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53390B512498BE4E002CA74E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		53390B532498BE4E002CA74E /* InformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
@@ -260,7 +260,7 @@
 		53390B4B2498BE4E002CA74E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				53390B4A2498BE4E002CA74E /* SignalReborn.app */,
+				53390B4A2498BE4E002CA74E /* Signal.app */,
 				533BB989251F860300CBFF0D /* Jailed.app */,
 			);
 			name = Products;
@@ -452,9 +452,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		53390B492498BE4E002CA74E /* SignalReborn */ = {
+		53390B492498BE4E002CA74E /* Signal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53390B602498BE58002CA74E /* Build configuration list for PBXNativeTarget "SignalReborn" */;
+			buildConfigurationList = 53390B602498BE58002CA74E /* Build configuration list for PBXNativeTarget "Signal" */;
 			buildPhases = (
 				4E7B6983364FBCD727F08706 /* [CP] Check Pods Manifest.lock */,
 				53390B462498BE4E002CA74E /* Sources */,
@@ -466,9 +466,9 @@
 			);
 			dependencies = (
 			);
-			name = SignalReborn;
+			name = Signal;
 			productName = SignalReborn;
-			productReference = 53390B4A2498BE4E002CA74E /* SignalReborn.app */;
+			productReference = 53390B4A2498BE4E002CA74E /* Signal.app */;
 			productType = "com.apple.product-type.application";
 		};
 		533BB962251F860300CBFF0D /* Jailed */ = {
@@ -519,7 +519,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53390B492498BE4E002CA74E /* SignalReborn */,
+				53390B492498BE4E002CA74E /* Signal */,
 				533BB962251F860300CBFF0D /* Jailed */,
 			);
 		};
@@ -867,6 +867,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 69;
 				DEVELOPMENT_TEAM = 7J8FJX4SRX;
 				ENABLE_HARDENED_RUNTIME = NO;
@@ -898,6 +899,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 69;
 				DEVELOPMENT_TEAM = 7J8FJX4SRX;
 				ENABLE_HARDENED_RUNTIME = NO;
@@ -994,7 +996,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53390B602498BE58002CA74E /* Build configuration list for PBXNativeTarget "SignalReborn" */ = {
+		53390B602498BE58002CA74E /* Build configuration list for PBXNativeTarget "Signal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53390B612498BE58002CA74E /* Debug */,

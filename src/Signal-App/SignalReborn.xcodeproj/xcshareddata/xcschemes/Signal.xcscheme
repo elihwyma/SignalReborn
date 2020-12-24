@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "53390B492498BE4E002CA74E"
-               BuildableName = "SignalReborn.app"
-               BlueprintName = "SignalReborn"
+               BuildableName = "Signal.app"
+               BlueprintName = "Signal"
                ReferencedContainer = "container:SignalReborn.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "53390B492498BE4E002CA74E"
-            BuildableName = "SignalReborn.app"
-            BlueprintName = "SignalReborn"
+            BuildableName = "Signal.app"
+            BlueprintName = "Signal"
             ReferencedContainer = "container:SignalReborn.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,8 +63,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "53390B492498BE4E002CA74E"
-            BuildableName = "SignalReborn.app"
-            BlueprintName = "SignalReborn"
+            BuildableName = "Signal.app"
+            BlueprintName = "Signal"
             ReferencedContainer = "container:SignalReborn.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

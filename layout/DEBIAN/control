@@ -3,8 +3,10 @@ Name: SignalReborn
 Version: 2.1.1
 Architecture: iphoneos-arm
 Description: Visualise your nearby cell towers
-Depends: firmware(>=12.2) | org.swift.libswift (>=5.0)
+Depends: firmware (>= 12.2) | org.swift.libswift
 Conflicts: com.charliewhile.signalreborn
+Replaces: com.charliewhile.signalreborn
+Breaks: com.charliewhile.signalreborn
 Author: Amy While
 Maintainer: Amy While
 Section: Application
