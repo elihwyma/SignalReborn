@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -52,7 +52,6 @@
 		533BB977251F860300CBFF0D /* SettingsSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A4279B251BAF080014DB06 /* SettingsSwitchCell.swift */; };
 		533BB978251F860300CBFF0D /* customMapViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B3EB3249EF47A00BE4276 /* customMapViews.swift */; };
 		533BB97A251F860300CBFF0D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367082424994047006BF88C /* CoreTelephony.framework */; };
-		533BB97B251F860300CBFF0D /* Pods_SignalReborn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997F685939BDCA5797A25263 /* Pods_SignalReborn.framework */; };
 		533BB97D251F860300CBFF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53390B5A2498BE58002CA74E /* LaunchScreen.storyboard */; };
 		533BB97E251F860300CBFF0D /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53A427A0251BB4FC0014DB06 /* InfoCell.xib */; };
 		533BB97F251F860300CBFF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53390B582498BE58002CA74E /* Assets.xcassets */; };
@@ -96,7 +95,8 @@
 		53EC776425640BC7002B41AD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC776225640BC7002B41AD /* LocationManager.swift */; };
 		53EC776C25641525002B41AD /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC776B25641525002B41AD /* CLLocationCoordinate2D.swift */; };
 		53EC776D25641525002B41AD /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC776B25641525002B41AD /* CLLocationCoordinate2D.swift */; };
-		5672E5E03EC5AE1B31CDDC23 /* Pods_SignalReborn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997F685939BDCA5797A25263 /* Pods_SignalReborn.framework */; };
+		E17CFCD02594E2B40090D8C4 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = E17CFCCF2594E2B40090D8C4 /* SQLite */; };
+		E17CFCD42594E2D30090D8C4 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = E17CFCD32594E2D30090D8C4 /* SQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,8 +153,6 @@
 		53EC776225640BC7002B41AD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		53EC776B25641525002B41AD /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
 		997F685939BDCA5797A25263 /* Pods_SignalReborn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignalReborn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3F83CCDC98991318424C35E /* Pods-SignalReborn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalReborn.debug.xcconfig"; path = "Target Support Files/Pods-SignalReborn/Pods-SignalReborn.debug.xcconfig"; sourceTree = "<group>"; };
-		ECFEB69D5E89F859302B2BF0 /* Pods-SignalReborn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalReborn.release.xcconfig"; path = "Target Support Files/Pods-SignalReborn/Pods-SignalReborn.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17CFCD02594E2B40090D8C4 /* SQLite in Frameworks */,
 				5367082524994047006BF88C /* CoreTelephony.framework in Frameworks */,
-				5672E5E03EC5AE1B31CDDC23 /* Pods_SignalReborn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +169,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17CFCD42594E2D30090D8C4 /* SQLite in Frameworks */,
 				533BB97A251F860300CBFF0D /* CoreTelephony.framework in Frameworks */,
-				533BB97B251F860300CBFF0D /* Pods_SignalReborn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +251,6 @@
 				53390B4C2498BE4E002CA74E /* SignalReborn */,
 				53390B4B2498BE4E002CA74E /* Products */,
 				5367082324994047006BF88C /* Frameworks */,
-				F5F055D1F36C5447948558B5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -440,15 +437,6 @@
 			path = Backend;
 			sourceTree = "<group>";
 		};
-		F5F055D1F36C5447948558B5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D3F83CCDC98991318424C35E /* Pods-SignalReborn.debug.xcconfig */,
-				ECFEB69D5E89F859302B2BF0 /* Pods-SignalReborn.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -456,17 +444,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53390B602498BE58002CA74E /* Build configuration list for PBXNativeTarget "Signal" */;
 			buildPhases = (
-				4E7B6983364FBCD727F08706 /* [CP] Check Pods Manifest.lock */,
 				53390B462498BE4E002CA74E /* Sources */,
 				53390B472498BE4E002CA74E /* Frameworks */,
 				53390B482498BE4E002CA74E /* Resources */,
-				AF64C58DFBD8D8914BCFC58D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Signal;
+			packageProductDependencies = (
+				E17CFCCF2594E2B40090D8C4 /* SQLite */,
+			);
 			productName = SignalReborn;
 			productReference = 53390B4A2498BE4E002CA74E /* Signal.app */;
 			productType = "com.apple.product-type.application";
@@ -475,17 +464,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 533BB986251F860300CBFF0D /* Build configuration list for PBXNativeTarget "Jailed" */;
 			buildPhases = (
-				533BB963251F860300CBFF0D /* [CP] Check Pods Manifest.lock */,
 				533BB964251F860300CBFF0D /* Sources */,
 				533BB979251F860300CBFF0D /* Frameworks */,
 				533BB97C251F860300CBFF0D /* Resources */,
-				533BB985251F860300CBFF0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Jailed;
+			packageProductDependencies = (
+				E17CFCD32594E2D30090D8C4 /* SQLite */,
+			);
 			productName = SignalReborn;
 			productReference = 533BB989251F860300CBFF0D /* Jailed.app */;
 			productType = "com.apple.product-type.application";
@@ -515,6 +505,9 @@
 				Base,
 			);
 			mainGroup = 53390B412498BE4D002CA74E;
+			packageReferences = (
+				E17CFCCE2594E2B30090D8C4 /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = 53390B4B2498BE4E002CA74E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -575,87 +568,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4E7B6983364FBCD727F08706 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SignalReborn-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		533BB963251F860300CBFF0D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SignalReborn-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		533BB985251F860300CBFF0D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SignalReborn/Pods-SignalReborn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SignalReborn/Pods-SignalReborn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SignalReborn/Pods-SignalReborn-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AF64C58DFBD8D8914BCFC58D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SignalReborn/Pods-SignalReborn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SignalReborn/Pods-SignalReborn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SignalReborn/Pods-SignalReborn-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53390B462498BE4E002CA74E /* Sources */ = {
@@ -862,7 +774,6 @@
 		};
 		53390B612498BE58002CA74E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3F83CCDC98991318424C35E /* Pods-SignalReborn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -882,7 +793,7 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.signalreborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
@@ -894,7 +805,6 @@
 		};
 		53390B622498BE58002CA74E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECFEB69D5E89F859302B2BF0 /* Pods-SignalReborn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -914,7 +824,7 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.signalreborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
@@ -925,7 +835,6 @@
 		};
 		533BB987251F860300CBFF0D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3F83CCDC98991318424C35E /* Pods-SignalReborn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -943,9 +852,9 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.1.2;
 				OTHER_SWIFT_FLAGS = "-D jailed $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalRebornJailed;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.signalreborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -956,7 +865,6 @@
 		};
 		533BB988251F860300CBFF0D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECFEB69D5E89F859302B2BF0 /* Pods-SignalReborn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -974,9 +882,9 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.1.2;
 				OTHER_SWIFT_FLAGS = "-D jailed $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalRebornJailed;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.signalreborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1015,6 +923,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E17CFCCE2594E2B30090D8C4 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E17CFCCF2594E2B40090D8C4 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E17CFCCE2594E2B30090D8C4 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+		E17CFCD32594E2D30090D8C4 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E17CFCCE2594E2B30090D8C4 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 53390B422498BE4D002CA74E /* Project object */;
 }
