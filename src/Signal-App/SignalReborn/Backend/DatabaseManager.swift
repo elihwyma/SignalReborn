@@ -23,7 +23,7 @@ class DatabaseManager {
         #else
         let message = SignalController.sharedRootController.copyFiles()
         #endif
-
+        
         switch (message) {
             case "Permission Error\n":
                 //Permission errors

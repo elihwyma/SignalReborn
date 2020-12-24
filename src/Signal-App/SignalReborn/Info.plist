@@ -2,14 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationUsageDescription</key>
-	<string>So that I can track everyth...... Nah I&apos;m kidding, I need to see where you are to put you on a map dumbo</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>So that I can track everyth...... Nah I&apos;m kidding, I need to see where you are to put you on a map dumbo</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>So that I can track everyth...... Nah I&apos;m kidding, I need to see where you are to put you on a map dumbo</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>So that I can track everyth...... Nah I&apos;m kidding, I need to see where you are to put you on a map dumbo</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -76,6 +68,14 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>So that I can track everyth...... Nah I'm kidding, I need to see where you are to put you on a map dumbo</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>So that I can track everyth...... Nah I'm kidding, I need to see where you are to put you on a map dumbo</string>
+	<key>NSLocationUsageDescription</key>
+	<string>So that I can track everyth...... Nah I'm kidding, I need to see where you are to put you on a map dumbo</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>So that I can track everyth...... Nah I'm kidding, I need to see where you are to put you on a map dumbo</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

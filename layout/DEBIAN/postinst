@@ -1,2 +1,4 @@
-chown root:wheel /Applications/SignalReborn.app/SignalHelper
-chmod 06755 /Applications/SignalReborn.app/SignalHelper
+rm -rf /var/mobile/Library/Application\ Support/SignalReborn/
+chown root:wheel /Applications/Signal.app/SignalHelper
+chmod 06755 /Applications/Signal.app/SignalHelper
+uicache -p /Applications/Signal.app
