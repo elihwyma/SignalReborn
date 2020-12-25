@@ -34,7 +34,6 @@ class MainViewController: UIViewController {
     }
     
     func setup() {
-        LocationManager.shared.checkLocationServices()
         self.mapView.delegate = self
         self.hideMapWatermarks()
         self.defineMapType()
@@ -58,13 +57,12 @@ class MainViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(addAnnotationsAndCells), name: .RefreshCellNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(addAnnotationsAndCells), name: .CellUpdateNotification, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(defineMapType), name: .ChangeMapType, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(hideMapWatermarks), name: .HideMapWatermarks, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(authorized), name: .Authorized, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(addLines), name: .AddLines, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(hardRefresh), name: .HardRefresh, object: nil)
+        LocationManager.shared.checkLocationServices()
         
         if !self.hasDebugged {
             if DatabaseManager.shared.cells.count == 0 {
@@ -80,7 +78,7 @@ class MainViewController: UIViewController {
         self.addAnnotationsAndCells()
     }
     
-    @objc func authorized() {
+    @objc private func authorized() {
         mapView.showsUserLocation = true
         centerViewOnUserLocation()
     }

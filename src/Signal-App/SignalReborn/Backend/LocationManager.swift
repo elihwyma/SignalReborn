@@ -34,16 +34,20 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             self.allowed()
+            return
         case .denied:
-            break
+            return
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
+            return
         case .restricted:
-            break
+            return
         case .authorizedAlways:
             self.allowed()
+            return
         @unknown default:
             locationManager.requestWhenInUseAuthorization()
+            return
         }
     }
     
