@@ -8,7 +8,7 @@
 2.1.2
 ### Where to download
  - [iOS Repository](https://repo.packix.com/)
- - [Signal Reborn on Packix](https://repo.packix.com/package/com.charliewhile.signalreborn/)
+ - [Signal Reborn on Packix](https://repo.packix.com/package/com.amywhile.signalreborn/)
 ### How to build
 - Download [Theos](https://github.com/theos/theos)
 - Install Xcode
