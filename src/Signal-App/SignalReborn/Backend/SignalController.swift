@@ -46,6 +46,7 @@ class SignalController {
         if let mnc = carrier?.mobileNetworkCode { CellInfo.shared.mnc = Int(mnc)! }
         if let mcc = carrier?.mobileCountryCode { CellInfo.shared.mcc = Int(mcc)! }
         if let name = carrier?.carrierName { CellInfo.shared.name = name }
+        if let technology = networkInfo.currentRadioAccessTechnology { CellInfo.shared.jailedtechnology = technology }
     }
     
     //MARK: - Handling the actual info
@@ -130,6 +131,7 @@ class CellInfo {
     static let shared = CellInfo()
     
     var name = ""
+    var jailedtechnology = ""
     var mnc = 0
     var mcc = 0
     var lat = [CLLocationDegrees]()

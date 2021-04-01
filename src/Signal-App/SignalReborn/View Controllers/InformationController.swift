@@ -37,7 +37,7 @@ class InformationController: UIViewController {
         InfoPageCell(identifier: "SocialCell", data:
                         ["imageName" : "TwitterPFP", "label" : "Amy - Follow me on Twitter", "link" : "https://twitter.com/elihweilrahc13"]),
         InfoPageCell(identifier: "SocialCell", data:
-                        ["imageName" : "Github", "label" : "View on Github", "link" : "https://github.com/CharlieWhile13/SignalReborn"])
+                        ["imageName" : "Github", "label" : "View on Github", "link" : "https://github.com/elihwyma/SignalReborn"])
     ]
     
     private let buttons: [InfoPageCell] = [
@@ -71,7 +71,10 @@ class InformationController: UIViewController {
             
             uwu.append(stinkyOwo)
         }
-        
+        var cum = [InfoPageCell]()
+        cum.append(InfoPageCell(identifier: "InfoCell", data:
+                                    ["descriptionLabel" : "JT", "specificLabel" : CellInfo.shared.jailedtechnology as Any]))
+        uwu.append(cum)
         
         self.toShow = uwu
         self.toShow.append(switchesAndSegments)
