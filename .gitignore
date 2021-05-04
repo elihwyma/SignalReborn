@@ -1,0 +1,7 @@
+Pods
+.theos
+.vscode
+.DS_Store
+.dragon
+packages
+*.ninja
