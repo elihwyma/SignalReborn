@@ -33,7 +33,7 @@ class InformationController: UIViewController {
     
     private let socials: [InfoPageCell] = [
         InfoPageCell(identifier: "SocialCell", data:
-                        ["imageName" : "Discord", "label" : "Join my Discord", "link" : "https://discord.gg/KNZRvGe"]),
+                        ["imageName" : "discord", "label" : "Join my Discord", "link" : "https://discord.gg/KNZRvGe"]),
         InfoPageCell(identifier: "SocialCell", data:
                         ["imageName" : "Github", "label" : "View on Github", "link" : "https://github.com/elihwyma/SignalReborn"])
     ]
