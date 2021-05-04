@@ -5,14 +5,13 @@
 ![GitHub](https://img.shields.io/github/license/elihwyma/SignalReborn?color=purple)
 ---
 ### Current Version
-2.1
+2.1.5
 ### Where to download
  - [iOS Repository](https://repo.packix.com/)
- - [Signal Reborn on Packix](https://repo.packix.com/package/com.charliewhile.signalreborn/)
+ - [Signal Reborn on Packix](https://repo.packix.com/package/com.amywhile.signalreborn/)
 ### How to build
 - Download [Theos](https://github.com/theos/theos)
 - Install Xcode
 - Clone this repository
-- Run `pod install` in the Signal Reborn directory
 - Run `make package` in the Signal Reborn directory
 - Install package in packages/
