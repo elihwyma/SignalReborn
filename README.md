@@ -2,7 +2,6 @@
 #### An app to visualise your nearby cell towers  
 ![GitHub top language](https://img.shields.io/github/languages/top/elihwyma/SignalReborn?color=purple)
 ![GitHub issues](https://img.shields.io/github/issues/elihwyma/SignalReborn?color=purple)
-![GitHub](https://img.shields.io/github/license/elihwyma/SignalReborn?color=purple)
 ---
 ### Current Version
 2.1.5
