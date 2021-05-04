@@ -33,9 +33,7 @@ class InformationController: UIViewController {
     
     private let socials: [InfoPageCell] = [
         InfoPageCell(identifier: "SocialCell", data:
-                        ["imageName" : "discord", "label" : "Join my Discord", "link" : "https://discord.gg/KNZRvGe"]),
-        InfoPageCell(identifier: "SocialCell", data:
-                        ["imageName" : "TwitterPFP", "label" : "Amy - Follow me on Twitter", "link" : "https://twitter.com/elihweilrahc13"]),
+                        ["imageName" : "Discord", "label" : "Join my Discord", "link" : "https://discord.gg/KNZRvGe"]),
         InfoPageCell(identifier: "SocialCell", data:
                         ["imageName" : "Github", "label" : "View on Github", "link" : "https://github.com/elihwyma/SignalReborn"])
     ]
@@ -47,6 +45,12 @@ class InformationController: UIViewController {
                         ["buttonName" : "Credits", "notificationName" : "ShowCredits"]),
         InfoPageCell(identifier: "ButtonCell", data:
                         ["buttonName" : "Purge Database", "notificationName" : "PurgeDatabase"])
+    ]
+    
+    private let githubSocials: [InfoPageCell] = [
+        InfoPageCell(identifier: "GithubSocial", data: [
+            "social": GithubSocial(githubProfile: "elihwyma", author: "Amy")
+        ])
     ]
     
     var toShow: [[InfoPageCell]]!
@@ -71,14 +75,11 @@ class InformationController: UIViewController {
             
             uwu.append(stinkyOwo)
         }
-        var cum = [InfoPageCell]()
-        cum.append(InfoPageCell(identifier: "InfoCell", data:
-                                    ["descriptionLabel" : "JT", "specificLabel" : CellInfo.shared.jailedtechnology as Any]))
-        uwu.append(cum)
-        
+
         self.toShow = uwu
         self.toShow.append(switchesAndSegments)
         self.toShow.append(socials)
+        self.toShow.append(githubSocials)
         self.toShow.append(buttons)
                 
         self.tableView.reloadData()
@@ -250,6 +251,10 @@ extension InformationController: UITableViewDataSource {
             cell.imageName = toShow[indexPath.section][indexPath.row].data["imageName"] as! String
             cell.link = toShow[indexPath.section][indexPath.row].data["link"] as! String
             cell.setup()
+            return cell
+        } else if toShow[indexPath.section][indexPath.row].identifier == "GithubSocial" {
+            let cell = GithubSocialCell()
+            cell.social = toShow[indexPath.section][indexPath.row].data["social"] as? GithubSocial
             return cell
         }
         

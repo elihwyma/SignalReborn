@@ -21,10 +21,8 @@
 		532256DF2561DB7A0035788F /* AppIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532256DB2561DB7A0035788F /* AppIconCell.swift */; };
 		5325F30A24B0EBF2004208F1 /* rootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5325F30924B0EBF2004208F1 /* rootController.m */; };
 		5327204824B3C1530098EB90 /* helpTheCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327204724B3C1530098EB90 /* helpTheCache.swift */; };
-		532F40472527FFAB008BED0F /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F40452527FFAB008BED0F /* SocialCell.swift */; };
 		532F40482527FFAB008BED0F /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F40452527FFAB008BED0F /* SocialCell.swift */; };
 		532F40492527FFAB008BED0F /* SocialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532F40462527FFAB008BED0F /* SocialCell.xib */; };
-		532F404A2527FFAB008BED0F /* SocialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532F40462527FFAB008BED0F /* SocialCell.xib */; };
 		53390B4E2498BE4E002CA74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53390B4D2498BE4E002CA74E /* AppDelegate.swift */; };
 		53390B522498BE4E002CA74E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53390B512498BE4E002CA74E /* MainViewController.swift */; };
 		53390B542498BE4E002CA74E /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53390B532498BE4E002CA74E /* InformationController.swift */; };
@@ -97,6 +95,10 @@
 		E1152F572641BDE2008C7D5D /* AmyNetworkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1152F552641BDE2008C7D5D /* AmyNetworkResolver.swift */; };
 		E1152F5B2641BFEF008C7D5D /* GithubSocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1152F5A2641BFEF008C7D5D /* GithubSocialCell.swift */; };
 		E1152F5C2641BFEF008C7D5D /* GithubSocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1152F5A2641BFEF008C7D5D /* GithubSocialCell.swift */; };
+		E1152F662641C4C9008C7D5D /* creditsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1152F652641C4C9008C7D5D /* creditsCell.swift */; };
+		E1152F672641C4C9008C7D5D /* creditsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1152F652641C4C9008C7D5D /* creditsCell.swift */; };
+		E1152F6A2641C54C008C7D5D /* SocialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532F40462527FFAB008BED0F /* SocialCell.xib */; };
+		E1152F6D2641C54F008C7D5D /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532F40452527FFAB008BED0F /* SocialCell.swift */; };
 		E17CFCD02594E2B40090D8C4 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = E17CFCCF2594E2B40090D8C4 /* SQLite */; };
 		E17CFCD42594E2D30090D8C4 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = E17CFCD32594E2D30090D8C4 /* SQLite */; };
 /* End PBXBuildFile section */
@@ -156,6 +158,7 @@
 		997F685939BDCA5797A25263 /* Pods_SignalReborn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignalReborn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1152F552641BDE2008C7D5D /* AmyNetworkResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmyNetworkResolver.swift; sourceTree = "<group>"; };
 		E1152F5A2641BFEF008C7D5D /* GithubSocialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSocialCell.swift; sourceTree = "<group>"; };
+		E1152F652641C4C9008C7D5D /* creditsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = creditsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +245,7 @@
 				532F40452527FFAB008BED0F /* SocialCell.swift */,
 				532F40462527FFAB008BED0F /* SocialCell.xib */,
 				E1152F5A2641BFEF008C7D5D /* GithubSocialCell.swift */,
+				E1152F652641C4C9008C7D5D /* creditsCell.swift */,
 			);
 			path = "Social Cell";
 			sourceTree = "<group>";
@@ -566,6 +570,7 @@
 				533BB981251F860300CBFF0D /* ButtonCell.xib in Resources */,
 				533BB982251F860300CBFF0D /* SettingsSwitchCell.xib in Resources */,
 				5372D7C72562A7F5000866F7 /* PurpleIcon@2x.png in Resources */,
+				E1152F6A2641C54C008C7D5D /* SocialCell.xib in Resources */,
 				533BB983251F860300CBFF0D /* SegmentedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +584,7 @@
 			files = (
 				532256C62561D7A60035788F /* AppIconPopover.swift in Sources */,
 				53EC776325640BC7002B41AD /* LocationManager.swift in Sources */,
+				E1152F662641C4C9008C7D5D /* creditsCell.swift in Sources */,
 				53EC776C25641525002B41AD /* CLLocationCoordinate2D.swift in Sources */,
 				537F0421249C452500EAC7FA /* SRMonitor.m in Sources */,
 				533BB960251F4BC400CBFF0D /* MKAnnotationView+Extension.swift in Sources */,
@@ -598,6 +604,7 @@
 				533BB9A02520B0AE00CBFF0D /* UserDefaults+Extension.swift in Sources */,
 				53390B4E2498BE4E002CA74E /* AppDelegate.swift in Sources */,
 				5346C2C62514B712009D26A0 /* CSVController.swift in Sources */,
+				E1152F6D2641C54F008C7D5D /* SocialCell.swift in Sources */,
 				537DF7BD251E601200693780 /* DatabaseManager.swift in Sources */,
 				53A427A8251BB8910014DB06 /* ButtonCell.swift in Sources */,
 				53B3668F2514095200B7B374 /* NSNotification+Extension.swift in Sources */,
@@ -612,6 +619,7 @@
 			files = (
 				532256C72561D7A60035788F /* AppIconPopover.swift in Sources */,
 				53EC776425640BC7002B41AD /* LocationManager.swift in Sources */,
+				E1152F672641C4C9008C7D5D /* creditsCell.swift in Sources */,
 				53EC776D25641525002B41AD /* CLLocationCoordinate2D.swift in Sources */,
 				533BB966251F860300CBFF0D /* SRMonitor.m in Sources */,
 				533BB968251F860300CBFF0D /* MKAnnotationView+Extension.swift in Sources */,

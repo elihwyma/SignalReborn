@@ -1,3 +1,4 @@
+#!/bin/sh
 rm -rf /var/mobile/Library/Application\ Support/SignalReborn/
 chown root:wheel /Applications/Signal.app/SignalHelper
 chmod 06755 /Applications/Signal.app/SignalHelper
