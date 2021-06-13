@@ -115,9 +115,10 @@ class SignalController {
         let showLTE = UserDefaults.standard.getBoolWithDefault(key: "ShowLTE", defaultValue: true)
         let showGSM = UserDefaults.standard.getBoolWithDefault(key: "ShowGSM", defaultValue: false)
         let showCDMA = UserDefaults.standard.getBoolWithDefault(key: "ShowCDMA", defaultValue: false)
+        let showNR = UserDefaults.standard.getBoolWithDefault(key: "ShowNR", defaultValue: true)
         
         for cell in DatabaseManager.shared.cells {
-            if ((cell.type == "LTE") && (showLTE)) || ((cell.type == "GSM") && (showGSM)) || ((cell.type == "CDMA") && (showCDMA)) {
+            if ((cell.type == .lte) && (showLTE)) || ((cell.type == .gsm) && (showGSM)) || ((cell.type == .cdma) && (showCDMA)) || (cell.type == .nr && showNR) {
                 if CellInfo.shared.cells.contains(cell.cellID) {
                     CellInfo.shared.lat.append(cell.lat)
                     CellInfo.shared.lon.append(cell.lon)

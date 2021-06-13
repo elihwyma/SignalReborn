@@ -808,7 +808,7 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.1.5;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.signalreborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";
@@ -842,7 +842,7 @@
 					"@executable_path/Frameworks",
 					/usr/lib/libswift/stable,
 				);
-				MARKETING_VERSION = 2.1.5;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.signalreborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/SignalReborn-Bridging-Header.h";

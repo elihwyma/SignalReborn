@@ -101,12 +101,13 @@ class MainViewController: UIViewController {
         let showLTE = UserDefaults.standard.getBoolWithDefault(key: "ShowLTE", defaultValue: true)
         let showGSM = UserDefaults.standard.getBoolWithDefault(key: "ShowGSM", defaultValue: false)
         let showCDMA = UserDefaults.standard.getBoolWithDefault(key: "ShowCDMA", defaultValue: false)
+        let showNR = UserDefaults.standard.getBoolWithDefault(key: "ShowNR", defaultValue: true)
         
         let allAnnotations = self.mapView.annotations
         
         for cell in DatabaseManager.shared.cells {
-            if ((cell.type == "LTE") && (showLTE)) || ((cell.type == "GSM") && (showGSM)) || ((cell.type == "CDMA") && (showCDMA)) {
-                self.addAnnotation(lat: cell.lat, lon: cell.lon, cellID: cell.cellID, MNC: cell.mnc, MCC: cell.mcc, type: cell.type, carrier: cell.carrier ?? "", iso: cell.iso ?? "", cc: cell.cc ?? 0, confidence: cell.confidence, tac: cell.tac ?? 0)
+            if ((cell.type == .lte) && (showLTE)) || ((cell.type == .gsm) && (showGSM)) || ((cell.type == .gsm) && (showCDMA)) || ((cell.type == .nr && showNR)) {
+                self.addAnnotation(lat: cell.lat, lon: cell.lon, cellID: cell.cellID, MNC: cell.mnc, MCC: cell.mcc, type: cell.type.rawValue, carrier: cell.carrier ?? "", iso: cell.iso ?? "", cc: cell.cc ?? 0, confidence: cell.confidence, tac: cell.tac ?? 0)
             }
         }
         

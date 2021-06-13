@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 class CSVController {
     //The CSV is bundled with the tweak, and can be found in /var/mobile/Library/Application\\ Support/SignalReborn
@@ -32,10 +31,10 @@ class CSVController {
         for row in rows {
             let columns = row.components(separatedBy: ";")
             if columns.count == 6 {
-                let mcc = Int((columns[0].replacingOccurrences(of: " ", with: "")).replacingOccurrences(of: "\t", with: ""))
-                let mnc = Int((columns[1].replacingOccurrences(of: " ", with: "")).replacingOccurrences(of: "\t", with: ""))
+                let mcc = Int((columns[0].replacingOccurrences(of: " ", with: "")).replacingOccurrences(of: "\t", with: "")) ?? -1
+                let mnc = Int((columns[1].replacingOccurrences(of: " ", with: "")).replacingOccurrences(of: "\t", with: "")) ?? -1
                 let iso = columns[2].uppercased()
-                let cc = Int((columns[4].replacingOccurrences(of: " ", with: "")).replacingOccurrences(of: "\t", with: ""))
+                let cc = Int((columns[4].replacingOccurrences(of: " ", with: "")).replacingOccurrences(of: "\t", with: "")) ?? -1
                 let carrier = columns[5]
                 carriers.append(Carrier(mcc: mcc, mnc: mnc, carrier: carrier, iso: iso, cc: cc))
             }
@@ -44,9 +43,9 @@ class CSVController {
 }
 
 struct Carrier {
-    let mcc: Int!
-    let mnc: Int!
-    let carrier: String!
-    let iso: String!
-    let cc: Int!
+    let mcc: Int
+    let mnc: Int
+    let carrier: String
+    let iso: String
+    let cc: Int
 }

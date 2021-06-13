@@ -28,10 +28,9 @@ class creditViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     private let credits = [
-        Credit(creditNames: "Amy While", reason: "Main Developer", socialLinks: "https://twitter.com/elihweilrahc13"),
+        Credit(creditNames: "Amy", reason: "Main Developer", socialLinks: "https://twitter.com/elihwyma"),
         Credit(creditNames: "Alpha", reason: "Making the icon", socialLinks: "https://twitter.com/Kutarin_"),
         Credit(creditNames: "SQLite.swift", reason: "Handling databases", socialLinks: "https://github.com/stephencelis/SQLite.swift"),
-        Credit(creditNames: "Hugo", reason: "Emotional Support", socialLinks: "https://twitter.com/suuperbro"),
         Credit(creditNames: "Emma", reason: "Emotional Support", socialLinks: "https://twitter.com/emiyl0"),
     ]
 
@@ -50,7 +49,7 @@ class creditViewController: UIViewController, UITableViewDelegate, UITableViewDa
 }
 
 struct Credit {
-    let creditNames: String!
-    let reason: String!
-    let socialLinks: String!
+    let creditNames: String
+    let reason: String
+    let socialLinks: String
 }

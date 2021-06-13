@@ -84,14 +84,14 @@ class DatabaseManager {
                     
                     for carrier in CSVController.shared.carriers {
                         if carrier.mcc == mcc && carrier.mnc == mnc {
-                            let cell = Cell(type: "LTE", mnc: mnc, mcc: mcc, cellID: id, lat: lat, lon: lon, confidence: confidence, tac: cell[TAC], carrier: carrier.carrier, cc: carrier.cc, iso: carrier.iso)
+                            let cell = Cell(type: .lte, mnc: mnc, mcc: mcc, cellID: id, lat: lat, lon: lon, confidence: confidence, tac: cell[TAC], carrier: carrier.carrier, cc: carrier.cc, iso: carrier.iso)
                             self.cells.append(cell)
                             isFound = true
                         }
                     }
                     
                     if !isFound {
-                        let cell = Cell(type: "LTE", mnc: mnc, mcc: mcc, cellID: id, lat: lat, lon: lon, confidence: confidence, tac: cell[TAC])
+                        let cell = Cell(type: .lte, mnc: mnc, mcc: mcc, cellID: id, lat: lat, lon: lon, confidence: confidence, tac: cell[TAC])
                         self.cells.append(cell)
                     }
                 }
@@ -110,14 +110,14 @@ class DatabaseManager {
                     
                     for carrier in CSVController.shared.carriers {
                         if carrier.mcc == mcc && carrier.mnc == mnc {
-                            let cell = Cell(type: "GSM", mnc: mnc, mcc: mcc, cellID: id, lat: lat, lon: lon, confidence: confidence, carrier: carrier.carrier, cc: carrier.cc, iso: carrier.iso)
+                            let cell = Cell(type: .gsm, mnc: mnc, mcc: mcc, cellID: id, lat: lat, lon: lon, confidence: confidence, carrier: carrier.carrier, cc: carrier.cc, iso: carrier.iso)
                             self.cells.append(cell)
                             isFound = true
                         }
                     }
                     
                     if !isFound {
-                        let cell = Cell(type: "GSM", mnc: mnc, mcc: mcc, cellID: id, lat: lat, lon: lon, confidence: confidence)
+                        let cell = Cell(type: .gsm, mnc: mnc, mcc: mcc, cellID: id, lat: lat, lon: lon, confidence: confidence)
                         self.cells.append(cell)
                     }
                 }
@@ -134,37 +134,67 @@ class DatabaseManager {
                 
                 for carrier in CSVController.shared.carriers {
                     if carrier.mcc == mcc && carrier.mnc == mnc {
-                        let cell = Cell(type: "CDMA", mnc: mnc, mcc: mcc, cellID: 0, lat: lat, lon: lon, confidence: confidence, carrier: carrier.carrier, cc: carrier.cc, iso: carrier.iso)
+                        let cell = Cell(type: .cdma, mnc: mnc, mcc: mcc, cellID: 0, lat: lat, lon: lon, confidence: confidence, carrier: carrier.carrier, cc: carrier.cc, iso: carrier.iso)
                         self.cells.append(cell)
                         isFound = true
                     }
                 }
                 
                 if !isFound {
-                    let cell = Cell(type: "CDMA", mnc: mnc, mcc: mcc, cellID: 0, lat: lat, lon: lon, confidence: confidence)
+                    let cell = Cell(type: .cdma, mnc: mnc, mcc: mcc, cellID: 0, lat: lat, lon: lon, confidence: confidence)
                     self.cells.append(cell)
                 }
             }
- 
+        
+            if #available(iOS 14, *) {
+                let nrCellTable = Table("NrCellLocation")
+                let nrCells = try DatabaseManager.shared.database.prepare(nrCellTable)
+                for cell in nrCells {
+                    let lat = CLLocationDegrees(cell[Latitude])
+                    let lon = CLLocationDegrees(cell[Longitude])
+                    let id = cell[cellID]
+                    let confidence = cell[confidence]
+                    
+                    if id != -1 || accuracy {
+                        let mnc = cell[MNC]
+                        let mcc = cell[MCC]
+                        if let carrier = CSVController.shared.carriers.first(where: { $0.mcc == mcc && $0.mnc == mnc }) {
+                            let cell = Cell(type: .nr, mnc: mnc, mcc: mcc, cellID: id, lat: lat, lon: lon, confidence: confidence, tac: cell[TAC], carrier: carrier.carrier, cc: carrier.cc, iso: carrier.iso)
+                            self.cells.append(cell)
+                        } else {
+                            let cell = Cell(type: .nr, mnc: mnc, mcc: mcc, cellID: id, lat: lat, lon: lon, confidence: confidence, tac: cell[TAC])
+                            self.cells.append(cell)
+                        }
+                    }
+                }
+            }
         
         } catch {
             return
         }
+        
     }
 }
 
 // MARK: - A cell type container
 struct Cell {
-    var type: String!
-    var mnc: Int!
-    var mcc: Int!
-    var cellID: Int!
-    var lat: CLLocationDegrees!
-    var lon: CLLocationDegrees!
-    var confidence: Int!
-    var tac: Int!
+    var type: CellType
+    var mnc: Int
+    var mcc: Int
+    var cellID: Int
+    var lat: CLLocationDegrees
+    var lon: CLLocationDegrees
+    var confidence: Int
+    var tac: Int?
     
-    var carrier: String!
-    var cc: Int!
-    var iso: String!
+    var carrier: String?
+    var cc: Int?
+    var iso: String?
+}
+
+enum CellType: String {
+    case lte = "LTE"
+    case gsm = "GSM"
+    case cdma = "CDMA"
+    case nr = "5G"
 }

@@ -22,6 +22,8 @@ class InformationController: UIViewController {
         InfoPageCell(identifier: "SettingsSwitchCell", data:
                         ["prefsName" : "ShowLTE", "cellName" : "Show LTE", "notificationName" : "refreshAnnotations", "default" : true]),
         InfoPageCell(identifier: "SettingsSwitchCell", data:
+                        ["prefsName" : "ShowNR", "cellName" : "Show 5G", "notificationName" : "refreshAnnotations", "default" : true]),
+        InfoPageCell(identifier: "SettingsSwitchCell", data:
                         ["prefsName" : "ShowCDMA", "cellName" : "Show CDMA", "notificationName" : "refreshAnnotations", "default" : false]),
         InfoPageCell(identifier: "SettingsSwitchCell", data:
                         ["prefsName" : "ShowGSM", "cellName" : "Show GSM", "notificationName" : "refreshAnnotations", "default" : false]),
