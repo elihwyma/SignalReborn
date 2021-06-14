@@ -4,7 +4,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/elihwyma/SignalReborn?color=purple)
 ---
 ### Current Version
-2.1.5
+2.2
 ### Where to download
  - [iOS Repository](https://repo.packix.com/)
  - [Signal Reborn on Packix](https://repo.packix.com/package/com.amywhile.signalreborn/)
