@@ -1,3 +1,5 @@
+![Welcome](https://github.com/elihwyma/elihwyma/raw/master/Welcome.gif)
+
 ## Signal Reborn
 #### An app to visualise your nearby cell towers  
 ![GitHub top language](https://img.shields.io/github/languages/top/elihwyma/SignalReborn?color=purple)
