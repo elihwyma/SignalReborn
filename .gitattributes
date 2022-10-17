@@ -1,0 +1,5 @@
+PrivateFrameworks/** linguist-vendored
+AemuloApp/Aemulo/libAemulo/Amiibo/**.h linguist-vendored
+AemuloApp/Aemulo/libAemulo/Amiibo/**.c linguist-vendored
+AemuloApp/Aemulo/libAemulo/Amiibo/*.h linguist-vendored
+AemuloApp/Aemulo/libAemulo/Amiibo/*.c linguist-vendored
