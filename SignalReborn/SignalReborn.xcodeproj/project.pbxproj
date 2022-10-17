@@ -12,6 +12,11 @@
 		E195ADF628FD882500A52F57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E195ADF528FD882500A52F57 /* Assets.xcassets */; };
 		E195ADF928FD882500A52F57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E195ADF728FD882500A52F57 /* LaunchScreen.storyboard */; };
 		E195AE0328FD89A700A52F57 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E195AE0228FD89A700A52F57 /* MapViewController.swift */; };
+		E195AE0828FD8E4600A52F57 /* CarrierDatabase.csv in Resources */ = {isa = PBXBuildFile; fileRef = E195AE0728FD8E4500A52F57 /* CarrierDatabase.csv */; };
+		E195AE0C28FD8F6200A52F57 /* Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E195AE0B28FD8F6100A52F57 /* Carrier.swift */; };
+		E195AE0E28FD8FD700A52F57 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E195AE0D28FD8FD700A52F57 /* CSVParser.swift */; };
+		E195AE1028FD901100A52F57 /* CSVParsableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E195AE0F28FD901100A52F57 /* CSVParsableProtocol.swift */; };
+		E195AE1328FD938100A52F57 /* CarrierDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E195AE1228FD938100A52F57 /* CarrierDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,12 @@
 		E195ADF828FD882500A52F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E195ADFA28FD882500A52F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E195AE0228FD89A700A52F57 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E195AE0728FD8E4500A52F57 /* CarrierDatabase.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CarrierDatabase.csv; sourceTree = "<group>"; };
+		E195AE0928FD8EC100A52F57 /* SignalReborn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignalReborn-Bridging-Header.h"; sourceTree = "<group>"; };
+		E195AE0B28FD8F6100A52F57 /* Carrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrier.swift; sourceTree = "<group>"; };
+		E195AE0D28FD8FD700A52F57 /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		E195AE0F28FD901100A52F57 /* CSVParsableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParsableProtocol.swift; sourceTree = "<group>"; };
+		E195AE1228FD938100A52F57 /* CarrierDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +94,7 @@
 		E195AE0428FD8C2200A52F57 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E195AE0728FD8E4500A52F57 /* CarrierDatabase.csv */,
 				E195ADF728FD882500A52F57 /* LaunchScreen.storyboard */,
 				E195ADF528FD882500A52F57 /* Assets.xcassets */,
 			);
@@ -92,8 +104,29 @@
 		E195AE0628FD8D2300A52F57 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				E195AE1128FD935E00A52F57 /* CSV Parser */,
+				E195AE0A28FD8EF500A52F57 /* CarrierDatabase */,
+				E195AE0928FD8EC100A52F57 /* SignalReborn-Bridging-Header.h */,
 			);
 			path = Backend;
+			sourceTree = "<group>";
+		};
+		E195AE0A28FD8EF500A52F57 /* CarrierDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				E195AE0B28FD8F6100A52F57 /* Carrier.swift */,
+				E195AE1228FD938100A52F57 /* CarrierDatabase.swift */,
+			);
+			path = CarrierDatabase;
+			sourceTree = "<group>";
+		};
+		E195AE1128FD935E00A52F57 /* CSV Parser */ = {
+			isa = PBXGroup;
+			children = (
+				E195AE0D28FD8FD700A52F57 /* CSVParser.swift */,
+				E195AE0F28FD901100A52F57 /* CSVParsableProtocol.swift */,
+			);
+			path = "CSV Parser";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E195AE0828FD8E4600A52F57 /* CarrierDatabase.csv in Resources */,
 				E195ADF928FD882500A52F57 /* LaunchScreen.storyboard in Resources */,
 				E195ADF628FD882500A52F57 /* Assets.xcassets in Resources */,
 			);
@@ -166,6 +200,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E195AE1328FD938100A52F57 /* CarrierDatabase.swift in Sources */,
+				E195AE0E28FD8FD700A52F57 /* CSVParser.swift in Sources */,
+				E195AE0C28FD8F6200A52F57 /* Carrier.swift in Sources */,
+				E195AE1028FD901100A52F57 /* CSVParsableProtocol.swift in Sources */,
 				E195ADF128FD881300A52F57 /* ViewController.swift in Sources */,
 				E195ADED28FD881300A52F57 /* AppDelegate.swift in Sources */,
 				E195AE0328FD89A700A52F57 /* MapViewController.swift in Sources */,
@@ -326,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalReborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/Backend/SignalReborn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -357,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amywhile.SignalReborn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SignalReborn/Backend/SignalReborn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
