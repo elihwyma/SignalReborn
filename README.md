@@ -8,8 +8,8 @@
 ### Current Version
 2.2.5
 ### Where to download
- - [iOS Repository](https://repo.packix.com/)
- - [Signal Reborn on Packix](https://repo.packix.com/package/com.amywhile.signalreborn/)
+ - [iOS Repository](https://repo.chariz.com/)
+ - [Signal Reborn on Chariz](https://chariz.com/get/signal/)
 ### How to build
 - Download [Theos](https://github.com/theos/theos)
 - Install Xcode
